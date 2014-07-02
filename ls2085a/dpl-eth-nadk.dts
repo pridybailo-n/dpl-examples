@@ -84,7 +84,106 @@
 				};
 			};
 		};
+
+		/*
+		 * Creating DPRC '2' & '4' for NADK usage.
+		 * DPRC@3 is left to be used for AIOP requirements.
+		 */
+
+		dprc@2 {
+			compatible = "fsl,dprc";
+			parent = "dprc@1";
+			options = "DPRC_CFG_OPT_SPAWN_ALLOWED", "DPRC_CFG_OPT_ALLOC_ALLOWED";
+			portal_id = <0x1>;
+
+			resources {
+
+				res@1 {
+					type = "mcp";
+					num = <0x1>;
+					options = <0x1>;
+					id_base_align = <0x2>;
+				};
+			};
+
+			objects {
+
+				obj@1 {
+					obj_name = "dpni@5";
+				};
+
+				obj@2 {
+					obj_name = "dpbp@5";
+				};
+
+				obj@3 {
+					obj_name = "dpio@5";
+				};
+
+				obj@4 {
+					obj_name = "dpio@6";
+				};
+			};
+		};
+
+
+		dprc@4 {
+			compatible = "fsl,dprc";
+			parent = "dprc@1";
+			options = "DPRC_CFG_OPT_SPAWN_ALLOWED", "DPRC_CFG_OPT_ALLOC_ALLOWED";
+			portal_id = <0x3>;
+
+			resources {
+
+				res@1 {
+					type = "mcp";
+					num = <0x1>;
+					options = <0x1>;
+					id_base_align = <0x4>;
+				};
+			};
+
+			objects {
+
+				obj@1 {
+					obj_name = "dpni@6";
+				};
+
+				obj@2 {
+					obj_name = "dpni@7";
+				};
+
+				obj@3 {
+					obj_name = "dpni@8";
+				};
+
+				obj@4 {
+					obj_name = "dpni@9";
+				};
+
+				obj@5 {
+					obj_name = "dpbp@6";
+				};
+
+				obj@6 {
+					obj_name = "dpio@7";
+				};
+
+				obj@7 {
+					obj_name = "dpio@8";
+				};
+
+				obj@8 {
+					obj_name = "dpio@9";
+				};
+
+				obj@9 {
+					obj_name = "dpio@10";
+				};
+			};
+		};
 	};
+
 	objects {
 		dpio@1 {
 			compatible = "fsl,dpio";
@@ -183,6 +282,135 @@
 			max_qos_key_size = <0>;
 			max_dist_key_size = <0>;
 		};
+
+		dpio@5 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <0x8>;
+		};
+
+		dpio@6 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <0x8>;
+		};
+
+		dpio@7 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <0x8>;
+		};
+
+		dpio@8 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <0x8>;
+		};
+
+		dpio@9 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <0x8>;
+		};
+
+		dpio@10 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <0x8>;
+		};
+
+		dpbp@5 {
+			compatible = "fsl,dpbp";
+		};
+
+		dpbp@6 {
+			compatible = "fsl,dpbp";
+		};
+
+		dpni@5 {
+			compatible = "fsl,dpni";
+			type = "DPNI_TYPE_NIC";
+			mac_addr = <0x0 0x0 0x0 0x0 0x0 0x5>;
+			max_senders = <0x0>;
+			options = <0x0>;
+			max_tcs = <0x0>;
+			max_dist_per_tc = <0x0 0x0 0x0>;
+			dist_key_variety = <0x0>;
+			max_unicast_filters = <0x0>;
+			max_multicast_filters = <0x0>;
+			max_vlan_filters = <0x0>;
+			max_qos_entries = <0x0>;
+			max_qos_key_size = <0x0>;
+			max_dist_key_size = <0x0>;
+		};
+
+		dpni@6 {
+			compatible = "fsl,dpni";
+			type = "DPNI_TYPE_NIC";
+			mac_addr = <0x0 0x0 0x0 0x0 0x0 0x6>;
+			max_senders = <0x0>;
+			options = <0x0>;
+			max_tcs = <0x0>;
+			max_dist_per_tc = <0x0 0x0 0x0>;
+			dist_key_variety = <0x0>;
+			max_unicast_filters = <0x0>;
+			max_multicast_filters = <0x0>;
+			max_vlan_filters = <0x0>;
+			max_qos_entries = <0x0>;
+			max_qos_key_size = <0x0>;
+			max_dist_key_size = <0x0>;
+		};
+
+		dpni@7 {
+			compatible = "fsl,dpni";
+			type = "DPNI_TYPE_NIC";
+			mac_addr = <0x0 0x0 0x0 0x0 0x0 0x7>;
+			max_senders = <0x0>;
+			options = <0x0>;
+			max_tcs = <0x0>;
+			max_dist_per_tc = <0x0 0x0 0x0>;
+			dist_key_variety = <0x0>;
+			max_unicast_filters = <0x0>;
+			max_multicast_filters = <0x0>;
+			max_vlan_filters = <0x0>;
+			max_qos_entries = <0x0>;
+			max_qos_key_size = <0x0>;
+			max_dist_key_size = <0x0>;
+		};
+
+		dpni@8 {
+			compatible = "fsl,dpni";
+			type = "DPNI_TYPE_NIC";
+			mac_addr = <0x0 0x0 0x0 0x0 0x0 0x8>;
+			max_senders = <0x0>;
+			options = <0x0>;
+			max_tcs = <0x0>;
+			max_dist_per_tc = <0x0 0x0 0x0>;
+			dist_key_variety = <0x0>;
+			max_unicast_filters = <0x0>;
+			max_multicast_filters = <0x0>;
+			max_vlan_filters = <0x0>;
+			max_qos_entries = <0x0>;
+			max_qos_key_size = <0x0>;
+			max_dist_key_size = <0x0>;
+		};
+
+		dpni@9 {
+			compatible = "fsl,dpni";
+			type = "DPNI_TYPE_NIC";
+			mac_addr = <0x0 0x0 0x0 0x0 0x0 0x9>;
+			max_senders = <0x0>;
+			options = <0x0>;
+			max_tcs = <0x0>;
+			max_dist_per_tc = <0x0 0x0 0x0>;
+			dist_key_variety = <0x0>;
+			max_unicast_filters = <0x0>;
+			max_multicast_filters = <0x0>;
+			max_vlan_filters = <0x0>;
+			max_qos_entries = <0x0>;
+			max_qos_key_size = <0x0>;
+			max_dist_key_size = <0x0>;
+		};
 	};
 	links {
 		link@1{
@@ -200,6 +428,26 @@
 		link@4{
 			obj = "dpni@4";
 			peer = "dpmac@4";
+		};
+		link@5{
+			obj = "dpni@5";
+			peer = "dpmac@5";
+		};
+		link@6{
+			obj = "dpni@6";
+			peer = "dpmac@6";
+		};
+		link@7{
+			obj = "dpni@7";
+			peer = "dpmac@7";
+		};
+		link@8{
+			obj = "dpni@8";
+			peer = "dpmac@8";
+		};
+		link@9{
+			obj = "dpni@9";
+			peer = "dpmac@9";
 		};
 	};
 };
