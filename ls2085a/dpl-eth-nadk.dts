@@ -44,6 +44,12 @@
 					options = <1>;
 					id_base_align = <18>;
 				};
+				res@5 {
+					type = "mcp";
+					num = <1>;
+					options = <1>;
+					id_base_align = <19>;
+				};
 			};
 			objects {
 				obj@1{
