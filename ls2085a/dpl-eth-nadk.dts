@@ -202,7 +202,6 @@
 			options = <0>;
 			max_tcs = <0>;
 			max_dist_per_tc = <0 0 0>;
-			dist_key_variety = <0>;
 			max_vlan_filters = <0>;
 			max_qos_entries = <0>;
 			max_qos_key_size = <0>;
@@ -327,7 +326,6 @@
 			options = <0x0>;
 			max_tcs = <0x0>;
 			max_dist_per_tc = <0x0 0x0 0x0>;
-			dist_key_variety = <0x0>;
 			max_vlan_filters = <0x0>;
 			max_qos_entries = <0x0>;
 			max_qos_key_size = <0x0>;
@@ -342,7 +340,6 @@
 			options = <0x0>;
 			max_tcs = <0x0>;
 			max_dist_per_tc = <0x0 0x0 0x0>;
-			dist_key_variety = <0x0>;
 			max_vlan_filters = <0x0>;
 			max_qos_entries = <0x0>;
 			max_qos_key_size = <0x0>;
@@ -357,7 +354,6 @@
 			options = <0x0>;
 			max_tcs = <0x0>;
 			max_dist_per_tc = <0x0 0x0 0x0>;
-			dist_key_variety = <0x0>;
 			max_vlan_filters = <0x0>;
 			max_qos_entries = <0x0>;
 			max_qos_key_size = <0x0>;
@@ -372,7 +368,6 @@
 			options = <0x0>;
 			max_tcs = <0x0>;
 			max_dist_per_tc = <0x0 0x0 0x0>;
-			dist_key_variety = <0x0>;
 			max_vlan_filters = <0x0>;
 			max_qos_entries = <0x0>;
 			max_qos_key_size = <0x0>;
@@ -387,7 +382,6 @@
 			options = <0x0>;
 			max_tcs = <0x0>;
 			max_dist_per_tc = <0x0 0x0 0x0>;
-			dist_key_variety = <0x0>;
 			max_vlan_filters = <0x0>;
 			max_qos_entries = <0x0>;
 			max_qos_key_size = <0x0>;
