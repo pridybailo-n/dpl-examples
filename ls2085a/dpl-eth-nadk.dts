@@ -1,6 +1,6 @@
 /* 
  * Datapath layout file for LS2085A.
- * Contains 2 containers-- one for host Linux, one for NADK
+ * Contains 4 containers-- one for host Linux, two for NADK & one for AIOP
  *
  * Copyright 2013 Freescale Semiconductor, Inc.
  */
@@ -91,17 +91,12 @@
 			};
 		};
 
-		/*
-		 * Creating DPRC '2' & '4' for NADK usage.
-		 * DPRC@3 is left to be used for AIOP requirements.
-		 */
-
 		dprc@2 {
 			compatible = "fsl,dprc";
 			parent = "dprc@1";
 			icid = <2>;
 			options = "DPRC_CFG_OPT_SPAWN_ALLOWED", "DPRC_CFG_OPT_ALLOC_ALLOWED";
-			portal_id = <0x1>;
+			portal_id = <0x5>;
 
 			resources {
 
@@ -130,9 +125,75 @@
 				obj@4 {
 					obj_name = "dpio@6";
 				};
+
+				obj@5{
+					obj_name = "dpci@2";
+				};
+
+				obj@6{
+					obj_name = "dpci@0";
+				};
+
 			};
 		};
 
+		dprc@3 {
+			compatible = "fsl,dprc";
+			parent = "dprc@1";
+			icid = <4>;
+			options = "DPRC_CFG_OPT_SPAWN_ALLOWED" , "DPRC_CFG_OPT_ALLOC_ALLOWED" , "DPRC_CFG_OPT_AIOP" , "DPRC_CFG_OPT_OBJECT_CREATE_ALLOWED";
+			portal_id = <0x1>;
+			objects {
+				obj@1{
+					obj_name = "dpni@10";
+				};
+				obj@2{
+					obj_name = "dpbp@0";
+				};
+				obj@3{
+					obj_name = "dpni@11";
+				};
+				obj@4{
+					obj_name = "dpbp@7";
+				};
+				obj@5{
+					obj_name = "dpbp@8";
+				};
+				obj@6{
+					obj_name = "dpbp@9";
+				};
+				obj@7{
+					obj_name = "dpbp@10";
+				};
+				obj@8{
+					obj_name = "dpbp@11";
+				};
+				obj@9{
+					obj_name = "dpbp@12";
+				};
+				obj@10{
+					obj_name = "dpbp@13";
+				};
+				obj@11{
+					obj_name = "dpbp@14";
+				};
+				obj@12{
+					obj_name = "dpbp@15";
+				};
+				obj@13{
+					obj_name = "dpbp@16";
+				};
+				obj@14{
+					obj_name = "dpbp@17";
+				};
+				obj@15{
+					obj_name = "dpci@3";
+				};
+				obj@16{
+					obj_name = "dpci@1";
+				};
+			};
+		};
 
 		dprc@4 {
 			compatible = "fsl,dprc";
@@ -200,7 +261,6 @@
 		};
 		dpbp@1 {
 			compatible = "fsl,dpbp";
-			buffer_size = <512>;
 		};
 		dpni@1{
 			compatible = "fsl,dpni";
@@ -419,7 +479,107 @@
 			max_qos_key_size = <0x0>;
 			max_dist_key_size = <0x0>;
 		};
+
+		dpni@10{
+			compatible = "fsl,dpni";
+			type = "DPNI_TYPE_NIC";
+			mac_addr = < 0x0 0x0 0x1 0x0 0x0 0x1 >;
+			max_senders = <0>;
+			options = "DPNI_OPT_MULTICAST_FILTER" , "DPNI_OPT_UNICAST_FILTER";
+			max_tcs = <0>;
+			max_dist_per_tc = < 0 0 0 0 0 0 0 0 >;
+			max_unicast_filters = <0>;
+			max_multicast_filters = <0>;
+			max_vlan_filters = <0>;
+			max_qos_entries = <0>;
+			max_qos_key_size = <0>;
+			max_dist_key_size = <0>;
+		};
+
+		dpni@11{
+			compatible = "fsl,dpni";
+			type = "DPNI_TYPE_NIC";
+			mac_addr = < 0x0 0x0 0x2 0x0 0x0 0x2 >;
+			max_senders = <0>;
+			options = "DPNI_OPT_MULTICAST_FILTER" , "DPNI_OPT_UNICAST_FILTER";
+			max_tcs = <0>;
+			max_dist_per_tc = < 0 0 0 0 0 0 0 0 >;
+			max_unicast_filters = <0>;
+			max_multicast_filters = <0>;
+			max_vlan_filters = <0>;
+			max_qos_entries = <0>;
+			max_qos_key_size = <0>;
+			max_dist_key_size = <0>;
+		};
+
+		dpbp@0 {
+			compatible = "fsl,dpbp";
+		};
+
+		dpbp@7 {
+			compatible = "fsl,dpbp";
+		};
+
+		dpbp@8 {
+			compatible = "fsl,dpbp";
+		};
+
+		dpbp@9 {
+			compatible = "fsl,dpbp";
+		};
+
+		dpbp@10 {
+			compatible = "fsl,dpbp";
+		};
+
+		dpbp@11 {
+			compatible = "fsl,dpbp";
+		};
+
+		dpbp@12 {
+			compatible = "fsl,dpbp";
+		};
+
+		dpbp@13 {
+			compatible = "fsl,dpbp";
+		};
+
+		dpbp@14 {
+			compatible = "fsl,dpbp";
+		};
+
+		dpbp@15 {
+			compatible = "fsl,dpbp";
+		};
+
+		dpbp@16 {
+			compatible = "fsl,dpbp";
+		};
+
+		dpbp@17 {
+			compatible = "fsl,dpbp";
+		};
+
+		dpci@0{
+			compatible = "fsl,dpci";
+			num_of_priorities = <2>;
+		};
+		dpci@1{
+			compatible = "fsl,dpci";
+			num_of_priorities = <2>;
+		};
+
+		dpci@2{
+			compatible = "fsl,dpci";
+			num_of_priorities = <2>;
+		};
+		dpci@3{
+			compatible = "fsl,dpci";
+			num_of_priorities = <2>;
+		};
+
 	};
+
 	links {
 		link@1{
 			obj = "dpni@1";
@@ -456,6 +616,22 @@
 		link@9{
 			obj = "dpni@9";
 			peer = "dpmac@9";
+		};
+		link@10 {
+			obj = "dpni@10";
+			peer = "dpmac@10";
+		};
+		link@11 {
+			obj = "dpni@11";
+			peer = "dpmac@11";
+		};
+		link@12 {
+			obj = "dpci@2";
+			peer = "dpci@3";
+		};
+		link@13 {
+			obj = "dpci@0";
+			peer = "dpci@1";
 		};
 	};
 };
