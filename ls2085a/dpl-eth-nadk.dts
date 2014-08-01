@@ -99,6 +99,7 @@
 		dprc@2 {
 			compatible = "fsl,dprc";
 			parent = "dprc@1";
+			icid = <2>;
 			options = "DPRC_CFG_OPT_SPAWN_ALLOWED", "DPRC_CFG_OPT_ALLOC_ALLOWED";
 			portal_id = <0x1>;
 
@@ -136,6 +137,7 @@
 		dprc@4 {
 			compatible = "fsl,dprc";
 			parent = "dprc@1";
+			icid = <3>;
 			options = "DPRC_CFG_OPT_SPAWN_ALLOWED", "DPRC_CFG_OPT_ALLOC_ALLOWED";
 			portal_id = <0x3>;
 
