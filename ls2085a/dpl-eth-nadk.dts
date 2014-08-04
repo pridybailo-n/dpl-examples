@@ -261,6 +261,7 @@
 		};
 		dpbp@1 {
 			compatible = "fsl,dpbp";
+			buffer_size = <512>;
 		};
 		dpni@1{
 			compatible = "fsl,dpni";
