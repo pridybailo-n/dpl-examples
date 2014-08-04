@@ -270,7 +270,6 @@
 			options = "DPNI_OPT_MULTICAST_FILTER";
 			max_tcs = <0>;
 			max_dist_per_tc = <0 0 0>;
-			dist_key_variety = <0>;
 			max_unicast_filters = <0>;
 			max_multicast_filters = <1>;
 			max_vlan_filters = <0>;
@@ -403,7 +402,6 @@
 			options = <0x0>;
 			max_tcs = <0x0>;
 			max_dist_per_tc = <0x0 0x0 0x0>;
-			dist_key_variety = <0x0>;
 			max_unicast_filters = <0x0>;
 			max_multicast_filters = <0x0>;
 			max_vlan_filters = <0x0>;
@@ -420,7 +418,6 @@
 			options = <0x0>;
 			max_tcs = <0x0>;
 			max_dist_per_tc = <0x0 0x0 0x0>;
-			dist_key_variety = <0x0>;
 			max_unicast_filters = <0x0>;
 			max_multicast_filters = <0x0>;
 			max_vlan_filters = <0x0>;
@@ -437,7 +434,6 @@
 			options = <0x0>;
 			max_tcs = <0x0>;
 			max_dist_per_tc = <0x0 0x0 0x0>;
-			dist_key_variety = <0x0>;
 			max_unicast_filters = <0x0>;
 			max_multicast_filters = <0x0>;
 			max_vlan_filters = <0x0>;
@@ -454,7 +450,6 @@
 			options = <0x0>;
 			max_tcs = <0x0>;
 			max_dist_per_tc = <0x0 0x0 0x0>;
-			dist_key_variety = <0x0>;
 			max_unicast_filters = <0x0>;
 			max_multicast_filters = <0x0>;
 			max_vlan_filters = <0x0>;
@@ -471,7 +466,6 @@
 			options = <0x0>;
 			max_tcs = <0x0>;
 			max_dist_per_tc = <0x0 0x0 0x0>;
-			dist_key_variety = <0x0>;
 			max_unicast_filters = <0x0>;
 			max_multicast_filters = <0x0>;
 			max_vlan_filters = <0x0>;
