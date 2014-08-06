@@ -271,7 +271,7 @@
 			max_tcs = <0>;
 			max_dist_per_tc = <0 0 0>;
 			max_unicast_filters = <0>;
-			max_multicast_filters = <1>;
+			max_multicast_filters = <0>;
 			max_vlan_filters = <0>;
 			max_qos_entries = <0>;
 			max_qos_key_size = <0>;
@@ -295,7 +295,7 @@
 			max_tcs = <1>;
 			max_dist_per_tc = <1 0 0>;
 			max_unicast_filters = <0>;
-			max_multicast_filters = <16>;
+			max_multicast_filters = <0>;
 			max_vlan_filters = <0>;
 			max_qos_entries = <0>;
 			max_qos_key_size = <0>;
@@ -319,7 +319,7 @@
 			max_tcs = <1>;
 			max_dist_per_tc = <1 0 0>;
 			max_unicast_filters = <0>;
-			max_multicast_filters = <16>;
+			max_multicast_filters = <0>;
 			max_vlan_filters = <0>;
 			max_qos_entries = <0>;
 			max_qos_key_size = <0>;
@@ -343,7 +343,7 @@
 			max_tcs = <1>;
 			max_dist_per_tc = <1 0 0>;
 			max_unicast_filters = <0>;
-			max_multicast_filters = <16>;
+			max_multicast_filters = <0>;
 			max_vlan_filters = <0>;
 			max_qos_entries = <0>;
 			max_qos_key_size = <0>;
