@@ -252,6 +252,12 @@
 				obj@9 {
 					obj_name = "dpio@10";
 				};
+				obj@10 {
+					obj_name = "dpseci@1";
+				};
+				obj@11 {
+					obj_name = "dpseci@2";
+				};
 			};
 		};
 	};
@@ -591,6 +597,16 @@
 		dpci@3{
 			compatible = "fsl,dpci";
 			num_of_priorities = <2>;
+		};
+		dpseci@1 {
+			compatible = "fsl,dpseci";
+			sec_if_id = <0x0>;
+			priorities = <0x1 0x0>;
+		};
+		dpseci@2 {
+			compatible = "fsl,dpseci";
+			sec_if_id = <0x0>;
+			priorities = <0x1 0x0>;
 		};
 
 	};
