@@ -50,12 +50,6 @@
 					options = <1>;
 					id_base_align = <19>;
 				};
-				res@6 {
-					type = "mcp";
-					num = <1>;
-					options = <1>;
-					id_base_align = <20>;
-				};
 			};
 			objects {
 				obj@1{
@@ -93,9 +87,6 @@
 				};
 				obj@12{
 					obj_name = "dpio@4";
-				};
-				obj@13{
-					obj_name = "dpsw@1";
 				};
 			};
 		};
@@ -618,23 +609,12 @@
 			priorities = <0x1 0x0>;
 		};
 
-		dpsw@1 {
-			compatible = "fsl,dpsw";
-			options = "DPSW_OPT_TC_DIS";
-			max_vlans = <0x10>;
-			max_fdbs = <0x1>;
-			num_fdb_entries = <0x400>;
-			fdb_aging_time = <0x12c>;
-			num_ifs = <0x3>;
-			max_fdb_mc_groups = <0x1>;
-		};
-
 	};
 
 	links {
 		link@1{
 			obj = "dpni@1";
-			peer = "dpsw@1/if@0";
+			peer = "dpmac@1";
 		};
 		link@2{
 			obj = "dpni@2";
@@ -666,7 +646,7 @@
 		};
 		link@9{
 			obj = "dpni@9";
-			peer = "dpsw@1/if@1";
+			peer = "dpmac@9";
 		};
 		link@10 {
 			obj = "dpni@10";
@@ -679,10 +659,6 @@
 		link@13 {
 			obj = "dpci@0";
 			peer = "dpci@1";
-		};
-		link@14 {
-			obj = "dpsw@1/if@2";
-			peer = "dpmac@12";
 		};
 	};
 };
