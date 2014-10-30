@@ -140,7 +140,7 @@
 				};
 
 				obj@6{
-					obj_name = "dpci@0";
+					obj_name = "dpci@4";
 				};
 
 			};
@@ -157,51 +157,48 @@
 					obj_name = "dpni@10";
 				};
 				obj@2{
-					obj_name = "dpbp@0";
-				};
-				obj@3{
 					obj_name = "dpni@11";
 				};
-				obj@4{
+				obj@3{
 					obj_name = "dpbp@7";
 				};
-				obj@5{
+				obj@4{
 					obj_name = "dpbp@8";
 				};
-				obj@6{
+				obj@5{
 					obj_name = "dpbp@9";
 				};
-				obj@7{
+				obj@6{
 					obj_name = "dpbp@10";
 				};
-				obj@8{
+				obj@7{
 					obj_name = "dpbp@11";
 				};
-				obj@9{
+				obj@8{
 					obj_name = "dpbp@12";
 				};
-				obj@10{
+				obj@9{
 					obj_name = "dpbp@13";
 				};
-				obj@11{
+				obj@10{
 					obj_name = "dpbp@14";
 				};
-				obj@12{
+				obj@11{
 					obj_name = "dpbp@15";
 				};
-				obj@13{
+				obj@12{
 					obj_name = "dpbp@16";
 				};
-				obj@14{
+				obj@13{
 					obj_name = "dpbp@17";
 				};
-				obj@15{
+				obj@14{
 					obj_name = "dpci@3";
 				};
-				obj@16{
+				obj@15{
 					obj_name = "dpci@1";
 				};
-				obj@17{
+				obj@16{
 					obj_name = "dpni@12";
 				};
 			};
@@ -542,10 +539,6 @@
 		};
 
 
-		dpbp@0 {
-			compatible = "fsl,dpbp";
-		};
-
 		dpbp@7 {
 			compatible = "fsl,dpbp";
 		};
@@ -590,7 +583,7 @@
 			compatible = "fsl,dpbp";
 		};
 
-		dpci@0{
+		dpci@4{
 			compatible = "fsl,dpci";
 			num_of_priorities = <2>;
 		};
@@ -677,7 +670,7 @@
 			peer = "dpci@3";
 		};
 		link@13 {
-			obj = "dpci@0";
+			obj = "dpci@4";
 			peer = "dpci@1";
 		};
 		link@14 {
