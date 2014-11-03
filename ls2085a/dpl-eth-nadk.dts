@@ -665,6 +665,10 @@
 			obj = "dpni@10";
 			peer = "dpmac@10";
 		};
+		link@11 {
+			obj = "dpni@11";
+			peer = "dpmac@5";
+		};
 		link@12 {
 			obj = "dpci@2";
 			peer = "dpci@3";
