@@ -431,9 +431,9 @@
 			type = "DPNI_TYPE_NIC";
 			mac_addr = <0x0 0x0 0x0 0x0 0x0 0x6>;
 			max_senders = <1>;
-			options = "DPNI_OPT_MULTICAST_FILTER" , "DPNI_OPT_UNICAST_FILTER";
+			options = "DPNI_OPT_MULTICAST_FILTER" , "DPNI_OPT_UNICAST_FILTER" , "DPNI_OPT_DIST_HASH";
 			max_tcs = <1>;
-			max_dist_per_tc = <1 0 0>;
+			max_dist_per_tc = <3>;
 			max_unicast_filters = <16>;
 			max_multicast_filters = <16>;
 			max_vlan_filters = <0x0>;
@@ -447,9 +447,9 @@
 			type = "DPNI_TYPE_NIC";
 			mac_addr = <0x0 0x0 0x0 0x0 0x0 0x7>;
 			max_senders = <1>;
-			options = "DPNI_OPT_MULTICAST_FILTER" , "DPNI_OPT_UNICAST_FILTER";
+			options = "DPNI_OPT_MULTICAST_FILTER" , "DPNI_OPT_UNICAST_FILTER" , "DPNI_OPT_DIST_HASH";
 			max_tcs = <1>;
-			max_dist_per_tc = <1 0 0>;
+			max_dist_per_tc = <3>;
 			max_unicast_filters = <16>;
 			max_multicast_filters = <16>;
 			max_vlan_filters = <0x0>;
@@ -463,9 +463,9 @@
 			type = "DPNI_TYPE_NIC";
 			mac_addr = <0x0 0x0 0x0 0x0 0x0 0x8>;
 			max_senders = <1>;
-			options = "DPNI_OPT_MULTICAST_FILTER" , "DPNI_OPT_UNICAST_FILTER";
+			options = "DPNI_OPT_MULTICAST_FILTER" , "DPNI_OPT_UNICAST_FILTER" , "DPNI_OPT_DIST_HASH";
 			max_tcs = <1>;
-			max_dist_per_tc = <1 0 0>;
+			max_dist_per_tc = <3>;
 			max_unicast_filters = <16>;
 			max_multicast_filters = <16>;
 			max_vlan_filters = <0x0>;
@@ -479,9 +479,9 @@
 			type = "DPNI_TYPE_NIC";
 			mac_addr = <0x0 0x0 0x0 0x0 0x0 0x9>;
 			max_senders = <1>;
-			options = "DPNI_OPT_MULTICAST_FILTER" , "DPNI_OPT_UNICAST_FILTER";
+			options = "DPNI_OPT_MULTICAST_FILTER" , "DPNI_OPT_UNICAST_FILTER" , "DPNI_OPT_DIST_HASH";
 			max_tcs = <1>;
-			max_dist_per_tc = <1 0 0>;
+			max_dist_per_tc = <3>;
 			max_unicast_filters = <16>;
 			max_multicast_filters = <16>;
 			max_vlan_filters = <0x0>;
