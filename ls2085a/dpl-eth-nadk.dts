@@ -264,6 +264,9 @@
 				obj@11 {
 					obj_name = "dpseci@2";
 				};
+				obj@12 {
+					obj_name = "dpcon@1";
+				};
 			};
 		};
 	};
@@ -620,6 +623,10 @@
 			fdb_aging_time = <0x12c>;
 			num_ifs = <0x4>;
 			max_fdb_mc_groups = <0x1>;
+		};
+		dpcon@1 {
+			compatible = "fsl,dpcon";
+			num_priorities = <8>;
 		};
 
 	};
