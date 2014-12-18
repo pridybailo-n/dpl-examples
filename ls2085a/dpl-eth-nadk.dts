@@ -16,7 +16,6 @@
 		dprc@1 {
 			compatible = "fsl,dprc";
 			parent = "none";
-			icid = <1>;
 			options = "DPRC_CFG_OPT_SPAWN_ALLOWED" , "DPRC_CFG_OPT_ALLOC_ALLOWED";
 			portal_id = <0>;
 			resources {
@@ -103,7 +102,6 @@
 		dprc@2 {
 			compatible = "fsl,dprc";
 			parent = "dprc@1";
-			icid = <2>;
 			options = "DPRC_CFG_OPT_SPAWN_ALLOWED", "DPRC_CFG_OPT_ALLOC_ALLOWED";
 			portal_id = <0x5>;
 
@@ -149,7 +147,6 @@
 		dprc@3 {
 			compatible = "fsl,dprc";
 			parent = "dprc@1";
-			icid = <0>;
 			options = "DPRC_CFG_OPT_TOPOLOGY_CHANGES_ALLOWED" , "DPRC_CFG_OPT_IOMMU_BYPASS" , "DPRC_CFG_OPT_SPAWN_ALLOWED" , "DPRC_CFG_OPT_ALLOC_ALLOWED" , "DPRC_CFG_OPT_AIOP" , "DPRC_CFG_OPT_OBJ_CREATE_ALLOWED";
 			portal_id = <0x1>;
 			objects {
@@ -207,7 +204,6 @@
 		dprc@4 {
 			compatible = "fsl,dprc";
 			parent = "dprc@1";
-			icid = <3>;
 			options = "DPRC_CFG_OPT_SPAWN_ALLOWED", "DPRC_CFG_OPT_ALLOC_ALLOWED";
 			portal_id = <0x3>;
 
