@@ -614,7 +614,7 @@
 			num_fdb_entries = <0x400>;
 			fdb_aging_time = <0x12c>;
 			num_ifs = <0x4>;
-			max_fdb_mc_groups = <0x1>;
+			max_fdb_mc_groups = <32>;
 		};
 		dpcon@1 {
 			compatible = "fsl,dpcon";
