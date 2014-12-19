@@ -21,39 +21,9 @@
 			resources {
 				res@1 {
 					type = "mcp";
-					num = <1>;
+					num = <16>;
 					options = <1>;
 					id_base_align = <15>;
-				};
-				res@2 {
-					type = "mcp";
-					num = <1>;
-					options = <1>;
-					id_base_align = <16>;
-				};
-				res@3 {
-					type = "mcp";
-					num = <1>;
-					options = <1>;
-					id_base_align = <17>;
-				};
-				res@4 {
-					type = "mcp";
-					num = <1>;
-					options = <1>;
-					id_base_align = <18>;
-				};
-				res@5 {
-					type = "mcp";
-					num = <1>;
-					options = <1>;
-					id_base_align = <19>;
-				};
-				res@6 {
-					type = "mcp";
-					num = <1>;
-					options = <1>;
-					id_base_align = <20>;
 				};
 			};
 			objects {
