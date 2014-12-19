@@ -593,66 +593,66 @@
 
 	};
 
-	links {
-		link@1{
-			obj = "dpni@1";
-			peer = "dpsw@1/if@0";
+	connections {
+		connection@1{
+			endpoint1 = "dpni@1";
+			endpoint2 = "dpsw@1/if@0";
 		};
-		link@2{
-			obj = "dpni@2";
-			peer = "dpmac@2";
+		connection@2{
+			endpoint1 = "dpni@2";
+			endpoint2 = "dpmac@2";
 		};
-		link@3{
-			obj = "dpni@3";
-			peer = "dpmac@3";
+		connection@3{
+			endpoint1 = "dpni@3";
+			endpoint2 = "dpmac@3";
 		};
-		link@4{
-			obj = "dpni@4";
-			peer = "dpmac@4";
+		connection@4{
+			endpoint1 = "dpni@4";
+			endpoint2 = "dpmac@4";
 		};
-		link@5 {
-			obj = "dpni@5";
-			peer = "dpni@12";
+		connection@5 {
+			endpoint1 = "dpni@5";
+			endpoint2 = "dpni@12";
 		};
-		link@6{
-			obj = "dpni@6";
-			peer = "dpmac@6";
+		connection@6{
+			endpoint1 = "dpni@6";
+			endpoint2 = "dpmac@6";
 		};
-		link@7{
-			obj = "dpni@7";
-			peer = "dpmac@7";
+		connection@7{
+			endpoint1 = "dpni@7";
+			endpoint2 = "dpmac@7";
 		};
-		link@8{
-			obj = "dpni@8";
-			peer = "dpmac@8";
+		connection@8{
+			endpoint1 = "dpni@8";
+			endpoint2 = "dpmac@8";
 		};
-		link@9{
-			obj = "dpni@9";
-			peer = "dpsw@1/if@1";
+		connection@9{
+			endpoint1 = "dpni@9";
+			endpoint2 = "dpsw@1/if@1";
 		};
-		link@10 {
-			obj = "dpni@10";
-			peer = "dpmac@10";
+		connection@10 {
+			endpoint1 = "dpni@10";
+			endpoint2 = "dpmac@10";
 		};
-		link@11 {
-			obj = "dpni@11";
-			peer = "dpmac@5";
+		connection@11 {
+			endpoint1 = "dpni@11";
+			endpoint2 = "dpmac@5";
 		};
-		link@12 {
-			obj = "dpci@2";
-			peer = "dpci@3";
+		connection@12 {
+			endpoint1 = "dpci@2";
+			endpoint2 = "dpci@3";
 		};
-		link@13 {
-			obj = "dpci@4";
-			peer = "dpci@1";
+		connection@13 {
+			endpoint1 = "dpci@4";
+			endpoint2 = "dpci@1";
 		};
-		link@14 {
-			obj = "dpsw@1/if@2";
-			peer = "dpmac@12";
+		connection@14 {
+			endpoint1 = "dpsw@1/if@2";
+			endpoint2 = "dpmac@12";
 		};
-		link@15 {
-			obj = "dpsw@1/if@3";
-			peer = "dpmac@13";
+		connection@15 {
+			endpoint1 = "dpsw@1/if@3";
+			endpoint2 = "dpmac@13";
 		};
 	};
 };
