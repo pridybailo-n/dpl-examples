@@ -111,6 +111,10 @@
 					obj_name = "dpci@4";
 				};
 
+				obj@7 {
+					obj_name = "dpbp@18";
+				};
+
 			};
 		};
 
@@ -460,7 +464,7 @@
 			type = "DPNI_TYPE_NIC";
 			mac_addr = < 0x0 0x0 0x1 0x0 0x0 0x1 >;
 			max_senders = <0>;
-			options = "DPNI_OPT_MULTICAST_FILTER" , "DPNI_OPT_UNICAST_FILTER";
+			options = "DPNI_OPT_MULTICAST_FILTER" , "DPNI_OPT_UNICAST_FILTER" , "DPNI_OPT_DIST_HASH";
 			max_tcs = <0>;
 			max_dist_per_tc = < 0 0 0 0 0 0 0 0 >;
 			max_unicast_filters = <0>;
@@ -476,7 +480,7 @@
 			type = "DPNI_TYPE_NIC";
 			mac_addr = < 0x0 0x0 0x2 0x0 0x0 0x2 >;
 			max_senders = <0>;
-			options = "DPNI_OPT_MULTICAST_FILTER" , "DPNI_OPT_UNICAST_FILTER";
+			options = "DPNI_OPT_MULTICAST_FILTER" , "DPNI_OPT_UNICAST_FILTER" , "DPNI_OPT_DIST_HASH";
 			max_tcs = <0>;
 			max_dist_per_tc = < 0 0 0 0 0 0 0 0 >;
 			max_unicast_filters = <0>;
@@ -589,6 +593,10 @@
 		dpcon@1 {
 			compatible = "fsl,dpcon";
 			num_priorities = <8>;
+		};
+
+		dpbp@18 {
+			compatible = "fsl,dpbp";
 		};
 
 	};
