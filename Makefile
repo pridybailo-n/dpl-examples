@@ -2,7 +2,7 @@ DESTDIR = .
 INSTALL = install
 DTC = dtc
 
-dts_sources := $(wildcard */*.dts)
+dts_sources := $(wildcard */*/*.dts)
 targets = $(dts_sources:.dts=.dtb)
 
 %.dtb: %.dts
