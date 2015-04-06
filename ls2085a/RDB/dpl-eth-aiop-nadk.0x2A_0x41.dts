@@ -14,7 +14,7 @@
 		dprc@1 {
 			compatible = "fsl,dprc";
 			parent = "none";
-			options = "DPRC_CFG_OPT_SPAWN_ALLOWED" , "DPRC_CFG_OPT_ALLOC_ALLOWED";
+			options = "DPRC_CFG_OPT_SPAWN_ALLOWED", "DPRC_CFG_OPT_ALLOC_ALLOWED", "DPRC_CFG_OPT_IRQ_CFG_ALLOWED";
 
 			objects {
 				/* ------------- MACs --------------*/
