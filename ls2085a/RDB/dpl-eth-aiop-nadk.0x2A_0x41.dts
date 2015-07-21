@@ -78,11 +78,44 @@
 				obj@403 {
 					obj_name = "dpio@1";
 				};
-				
+
 				/* ------------ DPAIOP -------------*/
 				obj@500{
 					obj_name = "dpaiop@0";
 				};				
+
+				/* ------------ DPCON --------------*/
+				obj@602 {
+					obj_name = "dpcon@2";
+				};
+
+				obj@603 {
+					obj_name = "dpcon@3";
+				};
+
+				obj@604 {
+					obj_name = "dpcon@4";
+				};
+
+				obj@605 {
+					obj_name = "dpcon@5";
+				};
+
+				obj@606 {
+					obj_name = "dpcon@6";
+				};
+
+				obj@607 {
+					obj_name = "dpcon@7";
+				};
+
+				obj@608 {
+					obj_name = "dpcon@8";
+				};
+
+				obj@609 {
+					obj_name = "dpcon@9";
+				};
 
 				/* ------------ DPMCPs --------------*/
 				obj@50 {
@@ -352,30 +385,30 @@
 			type = "DPNI_TYPE_NIC";
 			mac_addr = <0x02 0x00 0xc0 0xa8 0x48 0x01>;
 			max_senders = <8>;
-			options = "DPNI_OPT_MULTICAST_FILTER", "DPNI_OPT_UNICAST_FILTER", "DPNI_OPT_DIST_HASH";
+			options = "DPNI_OPT_MULTICAST_FILTER", "DPNI_OPT_UNICAST_FILTER", "DPNI_OPT_DIST_HASH", "DPNI_OPT_DIST_FS";
 			max_tcs = <1>;
-			max_dist_per_tc = <8 0 0>;
+			max_dist_per_tc = <7>;
 			max_unicast_filters = <0>;
 			max_multicast_filters = <0>;
 			max_vlan_filters = <0>;
 			max_qos_entries = <0>;
 			max_qos_key_size = <0>;
-			max_dist_key_size = <4>;
+			max_dist_key_size = <24>;
 		};
 		dpni@3 {
 			compatible = "fsl,dpni";
 			type = "DPNI_TYPE_NIC";
 			mac_addr = <0x02 0x00 0xc0 0xa8 0x48 0x03>;
 			max_senders = <8>;
-			options = "DPNI_OPT_MULTICAST_FILTER", "DPNI_OPT_UNICAST_FILTER", "DPNI_OPT_DIST_HASH";
+			options = "DPNI_OPT_MULTICAST_FILTER", "DPNI_OPT_UNICAST_FILTER", "DPNI_OPT_DIST_HASH", "DPNI_OPT_DIST_FS";
 			max_tcs = <1>;
-			max_dist_per_tc = <8 0 0>;
+			max_dist_per_tc = <7>;
 			max_unicast_filters = <0>;
 			max_multicast_filters = <0>;
 			max_vlan_filters = <0>;
 			max_qos_entries = <0>;
 			max_qos_key_size = <0>;
-			max_dist_key_size = <4>;
+			max_dist_key_size = <24>;
 		};
 		dpni@6 {
 			compatible = "fsl,dpni";
@@ -608,14 +641,53 @@
 			compatible = "fsl,dpseci";
 			sec_if_id = <0x0>;
 			priorities = <0x1 0x0>;
-        };
+	        };
 
-		/* ------------ DPCON ------------*/
-
+		/* ------------ DPCON -------------*/
 		dpcon@1 {
 			compatible = "fsl,dpcon";
+			num_priorities = <8>;
+		};
+
+		dpcon@2 {
+			compatible = "fsl,dpcon";
+			num_priorities = <8>;
+		};
+
+		dpcon@3 {
+			compatible = "fsl,dpcon";
+			num_priorities = <8>;
+		};
+
+		dpcon@4 {
+			compatible = "fsl,dpcon";
+			num_priorities = <8>;
+		};
+
+		dpcon@5 {
+			compatible = "fsl,dpcon";
+			num_priorities = <8>;
+		};
+
+		dpcon@6 {
+			compatible = "fsl,dpcon";
+			num_priorities = <8>;
+		};
+
+		dpcon@7 {
+			compatible = "fsl,dpcon";
+			num_priorities = <8>;
+		};
+
+		dpcon@8 {
+			compatible = "fsl,dpcon";
+			num_priorities = <8>;
+		};
+
+		dpcon@9 {
+			compatible = "fsl,dpcon";
 			num_priorities = <0x8>;
-        };
+		};
 
 		/* ------------ DPMAC --------------*/
 		dpmac@1 {
