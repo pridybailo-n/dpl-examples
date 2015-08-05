@@ -67,16 +67,28 @@
 
 				/* ------------ DPIOs --------------*/
 				obj@400 {
-					obj_name = "dpio@4";
+					obj_name = "dpio@1";
 				};
 				obj@401 {
-					obj_name = "dpio@3";
-				};
-				obj@402 {
 					obj_name = "dpio@2";
 				};
+				obj@402 {
+					obj_name = "dpio@3";
+				};
 				obj@403 {
-					obj_name = "dpio@1";
+					obj_name = "dpio@4";
+				};
+				obj@404 {
+					obj_name = "dpio@15";
+				};
+				obj@405 {
+					obj_name = "dpio@16";
+				};
+				obj@406 {
+					obj_name = "dpio@17";
+				};
+				obj@407 {
+					obj_name = "dpio@18";
 				};
 
 				/* ------------ DPAIOP -------------*/
@@ -689,6 +701,16 @@
 			num_priorities = <8>;
 		};
 		dpio@16 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <8>;
+		};
+		dpio@17 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <8>;
+		};
+		dpio@18 {
 			compatible = "fsl,dpio";
 			channel_mode = "DPIO_LOCAL_CHANNEL";
 			num_priorities = <8>;
