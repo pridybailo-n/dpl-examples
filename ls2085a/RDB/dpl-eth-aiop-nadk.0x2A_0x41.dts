@@ -360,16 +360,65 @@
 				};
 
 				obj@308 {
-					obj_name = "dpmcp@31";
+					obj_name = "dpio@15";
 				};
 
 				obj@309 {
+					obj_name = "dpio@16";
+				};
+
+				obj@400 {
+					obj_name = "dpmcp@31";
+				};
+
+				obj@500 {
 					obj_name = "dpseci@1";
 				};
 
-				obj@310 {
+				obj@600 {
 					obj_name = "dpcon@1";
 				};
+
+				obj@700 {
+					obj_name = "dpci@10";
+				};
+
+				obj@701 {
+					obj_name = "dpci@11";
+				};
+
+				obj@702 {
+					obj_name = "dpci@12";
+				};
+
+				obj@703 {
+					obj_name = "dpci@13";
+				};
+
+				obj@704 {
+					obj_name = "dpci@14";
+				};
+
+				obj@705 {
+					obj_name = "dpci@15";
+				};
+
+				obj@706 {
+					obj_name = "dpci@16";
+				};
+
+				obj@707 {
+					obj_name = "dpci@17";
+				};
+
+				obj@708 {
+					obj_name = "dpci@18";
+				};
+
+				obj@709 {
+					obj_name = "dpci@19";
+				};
+
 			};
 		};
 	};
@@ -634,6 +683,16 @@
 			channel_mode = "DPIO_LOCAL_CHANNEL";
 			num_priorities = <8>;
 		};
+		dpio@15 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <8>;
+		};
+		dpio@16 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <8>;
+		};
 
 		/* ------------ DPSECI ------------*/
 
@@ -803,6 +862,56 @@
 			compatible = "fsl,dpci";
 			num_of_priorities = <0x2>;
 		};
+
+		dpci@10 {
+			compatible = "fsl,dpci";
+			num_of_priorities = <0x1>;
+		};
+
+		dpci@11 {
+			compatible = "fsl,dpci";
+			num_of_priorities = <0x1>;
+		};
+
+		dpci@12 {
+			compatible = "fsl,dpci";
+			num_of_priorities = <0x1>;
+		};
+
+		dpci@13 {
+			compatible = "fsl,dpci";
+			num_of_priorities = <0x1>;
+		};
+
+		dpci@14 {
+			compatible = "fsl,dpci";
+			num_of_priorities = <0x1>;
+		};
+
+		dpci@15 {
+			compatible = "fsl,dpci";
+			num_of_priorities = <0x1>;
+		};
+
+		dpci@16 {
+			compatible = "fsl,dpci";
+			num_of_priorities = <0x1>;
+		};
+
+		dpci@17 {
+			compatible = "fsl,dpci";
+			num_of_priorities = <0x1>;
+		};
+
+		dpci@18 {
+			compatible = "fsl,dpci";
+			num_of_priorities = <0x1>;
+		};
+
+		dpci@19 {
+			compatible = "fsl,dpci";
+			num_of_priorities = <0x1>;
+		};
 	};
 
 	/*****************************************************************
@@ -844,6 +953,26 @@
 		connection@9{
 			endpoint1 = "dpci@1";
 			endpoint2 = "dpci@3";
+		};
+		connection@10{
+			endpoint1 = "dpci@10";
+			endpoint2 = "dpci@11";
+		};
+		connection@11{
+			endpoint1 = "dpci@12";
+			endpoint2 = "dpci@13";
+		};
+		connection@12{
+			endpoint1 = "dpci@14";
+			endpoint2 = "dpci@15";
+		};
+		connection@13{
+			endpoint1 = "dpci@16";
+			endpoint2 = "dpci@17";
+		};
+		connection@14{
+			endpoint1 = "dpci@18";
+			endpoint2 = "dpci@19";
 		};
 	};
 };
