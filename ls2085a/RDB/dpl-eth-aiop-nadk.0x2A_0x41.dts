@@ -213,6 +213,10 @@
 					obj_name = "dpio@14";
 				};
 
+				obj@202 {
+					obj_name = "dpio@21";
+				};
+
 				obj@300 {
 					obj_name = "dpci@3";
 				};
@@ -721,6 +725,11 @@
 			num_priorities = <8>;
 		};
 		dpio@20 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <8>;
+		};
+		dpio@21 {
 			compatible = "fsl,dpio";
 			channel_mode = "DPIO_LOCAL_CHANNEL";
 			num_priorities = <8>;
