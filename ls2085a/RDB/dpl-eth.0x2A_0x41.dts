@@ -25,17 +25,17 @@
 
 				/* ------------ DPNIs --------------*/
 				obj@200 {
-					obj_name = "dpni@0";
+					obj_name = "dpni@1";
 				};
 
 				/* ------------ DPBPs --------------*/
 				obj@300 {
-					obj_name="dpbp@0";
+					obj_name="dpbp@1";
 				};
 
 				/* ------------ DPIOs --------------*/
 				obj@400 {
-					obj_name = "dpio@0";
+					obj_name = "dpio@1";
 				};
 
 				/* ------------ DPMCPs --------------*/
@@ -78,7 +78,7 @@
 
 				/* ------------ DPCON --------------*/
 				obj@500 {
-					obj_name="dpcon@0";
+					obj_name="dpcon@1";
 				};
 			};
 		};
@@ -90,7 +90,7 @@
 	objects {
 
 		/* ------------ DPNI --------------*/
-		dpni@0 {
+		dpni@1 {
 			compatible="fsl,dpni";
 			type = "DPNI_TYPE_NIC";
 			mac_addr = <0x00 0x00 0x00 0x00 0x00 0x00>;
@@ -102,12 +102,12 @@
 		};
 
 		/* ------------ DPBP --------------*/
-		dpbp@0 {
+		dpbp@1 {
 			compatible="fsl,dpbp";
 		};
 
 		/* ------------ DPIO --------------*/
-		dpio@0 {
+		dpio@1 {
 			compatible = "fsl,dpio";
 			channel_mode = "DPIO_LOCAL_CHANNEL";
 			num_priorities = <8>;
@@ -163,7 +163,7 @@
 		};
 
 		/* ------------ DPCON --------------*/
-		dpcon@0 {
+		dpcon@1 {
 			compatible="fsl,dpcon";
 			num_priorities=<8>;
 		};
@@ -175,7 +175,7 @@
 	connections {
 		connection@5{
 			/* First copper port (ETH0 on the RDB chassis) */
-			endpoint1 = "dpni@0";
+			endpoint1 = "dpni@1";
 			endpoint2 = "dpmac@5";
 		};
 	};
