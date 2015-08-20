@@ -44,10 +44,13 @@
 				};
 
 				/* ------------ DPNIs --------------*/
+				obj@200 {
+					obj_name = "dpni@4";
+				};
 				obj@201 {
 					obj_name = "dpni@3";
 				};
-				obj@203 {
+				obj@202 {
 					obj_name = "dpni@1";
 				};
 
@@ -132,7 +135,39 @@
 				obj@610 {
 					obj_name = "dpcon@10";
 				};
-								
+
+				obj@611 {
+					obj_name = "dpcon@11";
+				};				
+
+				obj@612 {
+					obj_name = "dpcon@12";
+				};
+
+				obj@613 {
+					obj_name = "dpcon@13";
+				};
+				
+				obj@614 {
+					obj_name = "dpcon@14";
+				};
+
+				obj@615 {
+					obj_name = "dpcon@15";
+				};
+				
+				obj@616 {
+					obj_name = "dpcon@16";
+				};
+				
+				obj@617 {
+					obj_name = "dpcon@17";
+				};
+				
+				obj@618 {
+					obj_name = "dpcon@18";
+				};
+				
 				/* ------------ DPMCPs --------------*/
 				obj@50 {
 					obj_name = "dpmcp@10";
@@ -211,6 +246,10 @@
 			objects {
 
 				/* ------------ DPNIs --------------*/
+				obj@100 {
+					obj_name = "dpni@10";
+				};
+				
 				obj@101 {
 					obj_name = "dpni@7";
 				};
@@ -230,38 +269,6 @@
 
 				obj@202{
 					obj_name = "dpbp@9";
-				};
-
-				obj@203{
-					obj_name = "dpbp@10";
-				};
-
-				obj@204{
-					obj_name = "dpbp@11";
-				};
-
-				obj@205{
-					obj_name = "dpbp@12";
-				};
-
-				obj@206{
-					obj_name = "dpbp@13";
-				};
-
-				obj@207{
-					obj_name = "dpbp@14";
-				};
-
-				obj@208{
-					obj_name = "dpbp@15";
-				};
-
-				obj@209{
-					obj_name = "dpbp@16";
-				};
-
-				obj@210{
-					obj_name = "dpbp@17";
 				};
 			};
 		};
@@ -421,6 +428,21 @@
 			max_qos_key_size = <0>;
 			max_dist_key_size = <24>;
 		};
+		dpni@4 {
+			compatible = "fsl,dpni";
+			type = "DPNI_TYPE_NIC";
+			mac_addr = <0x02 0x00 0xc0 0xa8 0x48 0x04>;
+			max_senders = <8>;
+			options = "DPNI_OPT_MULTICAST_FILTER", "DPNI_OPT_UNICAST_FILTER", "DPNI_OPT_DIST_HASH", "DPNI_OPT_DIST_FS";
+			max_tcs = <1>;
+			max_dist_per_tc = <7>;
+			max_unicast_filters = <0>;
+			max_multicast_filters = <0>;
+			max_vlan_filters = <0>;
+			max_qos_entries = <0>;
+			max_qos_key_size = <0>;
+			max_dist_key_size = <24>;
+		};		
 		dpni@6 {
 			compatible = "fsl,dpni";
 			type = "DPNI_TYPE_NIC";
@@ -481,7 +503,22 @@
 			max_qos_key_size = <0>;
 			max_dist_key_size = <4>;
 		};
-
+		dpni@10 {
+			compatible = "fsl,dpni";
+			type = "DPNI_TYPE_NIC";
+			mac_addr = <0x00 0x00 0x00 0x00 0x00 0x0A>;
+			max_senders = <8>;
+			options = "DPNI_OPT_MULTICAST_FILTER", "DPNI_OPT_UNICAST_FILTER", "DPNI_OPT_TX_CONF_DISABLED";
+			max_tcs = <1>;
+			max_dist_per_tc = <8 0 0>;
+			max_unicast_filters = <0>;
+			max_multicast_filters = <0>;
+			max_vlan_filters = <0>;
+			max_qos_entries = <0>;
+			max_qos_key_size = <0>;
+			max_dist_key_size = <4>;
+		};
+		
 		/* ------------ DPAIOP ------------*/
 		dpaiop@0 {
 			compatible = "fsl,dpaiop";
@@ -511,30 +548,6 @@
 			compatible = "fsl,dpbp";
 		};		
 		dpbp@9 {
-			compatible = "fsl,dpbp";
-		};
-		dpbp@10 {
-			compatible = "fsl,dpbp";
-		};
-		dpbp@11 {
-			compatible = "fsl,dpbp";
-		};
-		dpbp@12 {
-			compatible = "fsl,dpbp";
-		};
-		dpbp@13 {
-			compatible = "fsl,dpbp";
-		};
-		dpbp@14 {
-			compatible = "fsl,dpbp";
-		};
-		dpbp@15 {
-			compatible = "fsl,dpbp";
-		};
-		dpbp@16 {
-			compatible = "fsl,dpbp";
-		};
-		dpbp@17 {
 			compatible = "fsl,dpbp";
 		};
 
@@ -685,6 +698,46 @@
 		};
 
 		dpcon@10 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x8>;
+		};
+		
+		dpcon@11 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x8>;
+		};
+		
+		dpcon@12 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x8>;
+		};
+		
+		dpcon@13 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x8>;
+		};
+		
+		dpcon@14 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x8>;
+		};
+		
+		dpcon@15 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x8>;
+		};		
+		
+		dpcon@16 {
+			compatible = "fsl,dpcon";
+			num_priorities = <8>;
+		};
+
+		dpcon@17 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x8>;
+		};
+		
+		dpcon@18 {
 			compatible = "fsl,dpcon";
 			num_priorities = <0x8>;
 		};
@@ -860,6 +913,10 @@
 			endpoint1 = "dpni@3";
 			endpoint2 = "dpmac@7";
 		};
+		connection@7{
+			endpoint1 = "dpni@4";
+			endpoint2 = "dpni@10";
+		};		
 		connection@10{
 			endpoint1 = "dpci@10";
 			endpoint2 = "dpci@11";
