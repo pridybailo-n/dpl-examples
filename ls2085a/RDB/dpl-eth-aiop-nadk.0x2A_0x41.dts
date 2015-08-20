@@ -129,6 +129,10 @@
 					obj_name = "dpcon@9";
 				};
 
+				obj@610 {
+					obj_name = "dpcon@10";
+				};
+								
 				/* ------------ DPMCPs --------------*/
 				obj@50 {
 					obj_name = "dpmcp@10";
@@ -680,6 +684,11 @@
 			num_priorities = <0x8>;
 		};
 
+		dpcon@10 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x8>;
+		};
+		
 		/* ------------ DPMAC --------------*/
 		dpmac@1 {
 			compatible = "fsl,dpmac";
