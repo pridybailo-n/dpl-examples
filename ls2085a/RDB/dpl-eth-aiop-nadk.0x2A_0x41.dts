@@ -193,52 +193,6 @@
 			};
 		};
 
-		/* BNSP-GPP Container */
-		dprc@2 {
-			compatible = "fsl,dprc";
-			parent = "dprc@1";
-			options = "DPRC_CFG_OPT_SPAWN_ALLOWED", "DPRC_CFG_OPT_ALLOC_ALLOWED", "DPRC_CFG_OPT_IRQ_CFG_ALLOWED";
-
-			objects {
-
-				obj@100 {
-					obj_name = "dpni@11";
-				};
-
-				obj@200 {
-					obj_name = "dpio@13";
-				};
-
-				obj@201 {
-					obj_name = "dpio@14";
-				};
-
-				obj@202 {
-					obj_name = "dpio@21";
-				};
-
-				obj@300 {
-					obj_name = "dpci@3";
-				};
-
-				obj@301 {
-					obj_name = "dpci@2";
-				};
-
-				obj@400 {
-					obj_name = "dpbp@18";
-				};
-
-				obj@401 {
-					obj_name = "dpbp@19";
-				};
-
-				obj@402 {
-					obj_name = "dpmcp@30";
-				};
-			};
-		};
-
 		/* AIOP Container */
 		dprc@3 {
 			compatible = "fsl,dprc";
@@ -253,10 +207,6 @@
 			objects {
 
 				/* ------------ DPNIs --------------*/
-				obj@100 {
-					obj_name = "dpni@10";
-				};
-
 				obj@101 {
 					obj_name = "dpni@7";
 				};
@@ -308,14 +258,6 @@
 
 				obj@210{
 					obj_name = "dpbp@17";
-				};
-
-				obj@211{
-					obj_name = "dpci@1";
-				};
-
-				obj@212{
-					obj_name = "dpci@0";
 				};
 			};
 		};
@@ -535,36 +477,6 @@
 			max_qos_key_size = <0>;
 			max_dist_key_size = <4>;
 		};
-		dpni@10 {
-			compatible = "fsl,dpni";
-			type = "DPNI_TYPE_NIC";
-			mac_addr = <0x00 0x00 0x00 0x00 0x00 0x0A>;
-			max_senders = <8>;
-			options = "DPNI_OPT_MULTICAST_FILTER", "DPNI_OPT_UNICAST_FILTER", "DPNI_OPT_TX_CONF_DISABLED";
-			max_tcs = <0>;
-			max_dist_per_tc = <0 0 0>;
-			max_unicast_filters = <0>;
-			max_multicast_filters = <0>;
-			max_vlan_filters = <0>;
-			max_qos_entries = <0>;
-			max_qos_key_size = <0>;
-			max_dist_key_size = <0>;
-		};
-		dpni@11 {
-			compatible = "fsl,dpni";
-			type = "DPNI_TYPE_NIC";
-			mac_addr = <0x00 0x00 0x00 0x00 0x00 0x0B>;
-			max_senders = <8>;
-			options = "DPNI_OPT_MULTICAST_FILTER", "DPNI_OPT_UNICAST_FILTER";
-			max_tcs = <0>;
-			max_dist_per_tc = <0 0 0>;
-			max_unicast_filters = <0>;
-			max_multicast_filters = <0>;
-			max_vlan_filters = <0>;
-			max_qos_entries = <0>;
-			max_qos_key_size = <0>;
-			max_dist_key_size = <0>;
-		};
 
 		/* ------------ DPAIOP ------------*/
 		dpaiop@0 {
@@ -619,12 +531,6 @@
 			compatible = "fsl,dpbp";
 		};
 		dpbp@17 {
-			compatible = "fsl,dpbp";
-		};
-		dpbp@18 {
-			compatible = "fsl,dpbp";
-		};
-		dpbp@19 {
 			compatible = "fsl,dpbp";
 		};
 
@@ -689,16 +595,6 @@
 			channel_mode = "DPIO_LOCAL_CHANNEL";
 			num_priorities = <8>;
 		};
-		dpio@13 {
-			compatible = "fsl,dpio";
-			channel_mode = "DPIO_LOCAL_CHANNEL";
-			num_priorities = <8>;
-		};
-		dpio@14 {
-			compatible = "fsl,dpio";
-			channel_mode = "DPIO_LOCAL_CHANNEL";
-			num_priorities = <8>;
-		};
 		dpio@15 {
 			compatible = "fsl,dpio";
 			channel_mode = "DPIO_LOCAL_CHANNEL";
@@ -725,11 +621,6 @@
 			num_priorities = <8>;
 		};
 		dpio@20 {
-			compatible = "fsl,dpio";
-			channel_mode = "DPIO_LOCAL_CHANNEL";
-			num_priorities = <8>;
-		};
-		dpio@21 {
 			compatible = "fsl,dpio";
 			channel_mode = "DPIO_LOCAL_CHANNEL";
 			num_priorities = <8>;
@@ -876,34 +767,11 @@
 		dpmcp@29 {
 			compatible = "fsl,dpmcp";
 		};
-		dpmcp@30 {
-			compatible = "fsl,dpmcp";
-		};
 		dpmcp@31 {
 			compatible = "fsl,dpmcp";
 		};
 
 		/* ------------ DPCI  --------------*/
-		dpci@0 {
-			compatible = "fsl,dpci";
-			num_of_priorities = <0x2>;
-		};
-
-		dpci@1 {
-			compatible = "fsl,dpci";
-			num_of_priorities = <0x2>;
-		};
-
-		dpci@2 {
-			compatible = "fsl,dpci";
-			num_of_priorities = <0x2>;
-		};
-
-		dpci@3 {
-			compatible = "fsl,dpci";
-			num_of_priorities = <0x2>;
-		};
-
 		dpci@10 {
 			compatible = "fsl,dpci";
 			num_of_priorities = <0x1>;
@@ -982,18 +850,6 @@
 		connection@6{
 			endpoint1 = "dpni@3";
 			endpoint2 = "dpmac@7";
-		};
-		connection@7{
-			endpoint1 = "dpni@10";
-			endpoint2 = "dpni@11";
-		};
-		connection@8{
-			endpoint1 = "dpci@0";
-			endpoint2 = "dpci@2";
-		};
-		connection@9{
-			endpoint1 = "dpci@1";
-			endpoint2 = "dpci@3";
 		};
 		connection@10{
 			endpoint1 = "dpci@10";
