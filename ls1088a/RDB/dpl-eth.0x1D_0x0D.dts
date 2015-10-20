@@ -19,9 +19,6 @@
 			objects {
 				/* ------------- MACs --------------*/
 				obj@100 {
-					obj_name = "dpmac@1";
-				};				
-				obj@101 {
 					obj_name = "dpmac@2";
 				};
 
@@ -40,11 +37,6 @@
 					obj_name = "dpio@1";
 				};
 
-				/* ------------ DPAIOP --------------*/
-				obj@500{
-					obj_name = "dpaiop@0";
-				};
-				
 				/* ------------ DPMCPs --------------*/
 				obj@701 {
 					obj_name="dpmcp@1";
@@ -84,55 +76,17 @@
 				};
 
 				/* ------------ DPCON --------------*/
-				obj@800 {
+				obj@500 {
 					obj_name="dpcon@1";
 				};
 			};
 		};
-		dprc@2 {
-			compatible = "fsl,dprc";
-			parent = "dprc@1";
-			options = "DPRC_CFG_OPT_IRQ_CFG_ALLOWED" , "DPRC_CFG_OPT_TOPOLOGY_CHANGES_ALLOWED" , "DPRC_CFG_OPT_IOMMU_BYPASS" , "DPRC_CFG_OPT_SPAWN_ALLOWED" , "DPRC_CFG_OPT_ALLOC_ALLOWED" , "DPRC_CFG_OPT_AIOP" , "DPRC_CFG_OPT_OBJ_CREATE_ALLOWED";
-			objects {
-				/* ------------ DPNIs --------------*/
-				obj@100{
-					obj_name = "dpni@2";
-				};
-				
-				/* ------------ DPBPs --------------*/
-				obj@200{
-					obj_name = "dpbp@2";
-				};
-				obj@201{
-					obj_name = "dpbp@3";
-				};
-				obj@202{
-					obj_name = "dpbp@4";
-				};
-				obj@203{
-					obj_name = "dpbp@5";
-				};
-				obj@204{
-					obj_name = "dpbp@6";
-				};
-				obj@205{
-					obj_name = "dpbp@7";
-				};
-				obj@206{
-					obj_name = "dpbp@8";
-				};				
-			};
-		};		
 	};
 
 	/*****************************************************************
          * Objects
          *****************************************************************/
 	objects {
-		dpaiop@0 {
-			compatible = "fsl,dpaiop";
-			aiop_container_id = <2>;
-		};
 
 		/* ------------ DPNI --------------*/
 		dpni@1 {
@@ -145,46 +99,11 @@
 			max_dist_per_tc = <0>;
 			max_dist_key_size = <24>;
 		};
-		dpni@2{
-			compatible = "fsl,dpni";
-			mac_addr = <0x00 0x00 0x00 0x00 0x00 0x02>; 
-			max_senders = <0>;
-			options = "DPNI_OPT_MULTICAST_FILTER" , "DPNI_OPT_UNICAST_FILTER" , "DPNI_OPT_TX_CONF_DISABLED" , "DPNI_OPT_DIST_HASH";
-			max_tcs = <0>;
-			max_dist_per_tc = < 0 0 0 0 0 0 0 0 >;
-			max_unicast_filters = <0>;
-			max_multicast_filters = <0>;
-			max_vlan_filters = <0>;
-			max_qos_entries = <0>;
-			max_qos_key_size = <0>;
-			max_dist_key_size = <0>;
-		};
 
 		/* ------------ DPBP --------------*/
 		dpbp@1 {
 			compatible="fsl,dpbp";
 		};
-		dpbp@2 {
-			compatible="fsl,dpbp";
-		};
-		dpbp@3 {
-			compatible="fsl,dpbp";
-		};
-		dpbp@4 {
-			compatible="fsl,dpbp";
-		};
-		dpbp@5 {
-			compatible="fsl,dpbp";
-		};
-		dpbp@6 {
-			compatible="fsl,dpbp";
-		};
-		dpbp@7 {
-			compatible="fsl,dpbp";
-		};
-		dpbp@8 {
-			compatible="fsl,dpbp";
-		};	
 
 		/* ------------ DPIO --------------*/
 		dpio@1 {
@@ -193,9 +112,6 @@
 			num_priorities = <8>;
 		};
 
-		dpmac@1 {
-			compatible = "fsl,dpmac";
-		};
 		dpmac@2 {
 			compatible = "fsl,dpmac";
 		};
@@ -249,12 +165,8 @@
          * Connections
          *****************************************************************/
 	connections {
-		connection@1{
+		connection@5{
 			endpoint1 = "dpni@1";
-			endpoint2 = "dpmac@1";
-		};
-		connection@2{
-			endpoint1 = "dpni@2";
 			endpoint2 = "dpmac@2";
 		};
 	};
