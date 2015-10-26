@@ -28,6 +28,12 @@
 			uart_id = <4>;
 		};
 	};
+	controllers {
+		qbman {
+			/* Transform one 8-WQ channel into four 2-WQ channels */
+			wq_ch_conversion = <1>;
+		};
+	};
 	board_info {
 		/* For RDB SerDes 0x2a_41 */
 		ports {

@@ -165,7 +165,7 @@
 		/* ------------ DPCON --------------*/
 		dpcon@0 {
 			compatible="fsl,dpcon";
-			num_priorities=<8>;
+			num_priorities=<2>;
 		};
 	};
 
