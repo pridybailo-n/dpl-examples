@@ -270,6 +270,16 @@
 				obj@202{
 					obj_name = "dpbp@9";
 				};
+
+				/* ------------ DPCIs --------------*/
+				obj@300{
+					obj_name = "dpci@0";
+				};
+
+				obj@301{
+					obj_name = "dpci@1";
+				};
+
 			};
 		};
 
@@ -387,6 +397,15 @@
 				obj@709 {
 					obj_name = "dpci@19";
 				};
+
+				obj@800 {
+					obj_name = "dpci@2";
+				};
+
+				obj@801 {
+					obj_name = "dpci@3";
+				};
+
 
 			};
 		};
@@ -834,6 +853,26 @@
 		};
 
 		/* ------------ DPCI  --------------*/
+		dpci@0 {
+			compatible = "fsl,dpci";
+			num_of_priorities = <0x2>;
+		};
+
+		dpci@1 {
+			compatible = "fsl,dpci";
+			num_of_priorities = <0x2>;
+		};
+
+		dpci@2 {
+			compatible = "fsl,dpci";
+			num_of_priorities = <0x2>;
+		};
+
+		dpci@3 {
+			compatible = "fsl,dpci";
+			num_of_priorities = <0x2>;
+		};
+
 		dpci@10 {
 			compatible = "fsl,dpci";
 			num_of_priorities = <0x1>;
@@ -936,6 +975,14 @@
 		connection@14{
 			endpoint1 = "dpci@18";
 			endpoint2 = "dpci@19";
+		};
+		connection@15{
+			endpoint1 = "dpci@0";
+			endpoint2 = "dpci@2";
+		};
+		connection@16{
+			endpoint1 = "dpci@1";
+			endpoint2 = "dpci@3";
 		};
 	};
 };
