@@ -37,6 +37,27 @@
 				obj@400 {
 					obj_name = "dpio@0";
 				};
+				obj@401 {
+					obj_name = "dpio@1";
+				};
+				obj@402 {
+					obj_name = "dpio@2";
+				};
+				obj@403 {
+					obj_name = "dpio@3";
+				};
+				obj@404 {
+					obj_name = "dpio@4";
+				};
+				obj@405 {
+					obj_name = "dpio@5";
+				};
+				obj@406 {
+					obj_name = "dpio@6";
+				};
+				obj@407 {
+					obj_name = "dpio@7";
+				};
 
 				/* ------------ DPMCPs --------------*/
 				obj@701 {
@@ -108,6 +129,41 @@
 
 		/* ------------ DPIO --------------*/
 		dpio@0 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <8>;
+		};
+		dpio@1 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <8>;
+		};
+		dpio@2 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <8>;
+		};
+		dpio@3 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <8>;
+		};
+		dpio@4 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <8>;
+		};
+		dpio@5 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <8>;
+		};
+		dpio@6 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <8>;
+		};
+		dpio@7 {
 			compatible = "fsl,dpio";
 			channel_mode = "DPIO_LOCAL_CHANNEL";
 			num_priorities = <8>;
