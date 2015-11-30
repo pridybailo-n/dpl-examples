@@ -46,9 +46,6 @@
 				link_type = "MAC_LINK_TYPE_FIXED";
 			};
 			/* AQR PHYs */
-			mac@5 {
-				link_type = "MAC_LINK_TYPE_PHY";
-			};
 		};
 	};
 };
