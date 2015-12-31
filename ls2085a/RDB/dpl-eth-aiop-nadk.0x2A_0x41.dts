@@ -167,6 +167,11 @@
 				obj@618 {
 					obj_name = "dpcon@18";
 				};
+
+				/* ------------ DPRTC --------------*/
+				obj@700 {
+					obj_name="dprtc@0";
+				};
 				
 				/* ------------ DPMCPs --------------*/
 				obj@50 {
@@ -759,6 +764,11 @@
 		dpcon@18 {
 			compatible = "fsl,dpcon";
 			num_priorities = <0x8>;
+		};
+
+		/* ------------ DPRTC --------------*/
+		dprtc@0 {
+			compatible="fsl,dprtc";
 		};
 		
 		/* ------------ DPMAC --------------*/

@@ -80,6 +80,11 @@
 				obj@500 {
 					obj_name="dpcon@0";
 				};
+
+				/* ------------ DPRTC --------------*/
+				obj@800 {
+					obj_name="dprtc@0";
+				};
 			};
 		};
 	};
@@ -166,6 +171,11 @@
 		dpcon@0 {
 			compatible="fsl,dpcon";
 			num_priorities=<2>;
+		};
+
+		/* ------------ DPRTC --------------*/
+		dprtc@0 {
+			compatible="fsl,dprtc";
 		};
 	};
 
