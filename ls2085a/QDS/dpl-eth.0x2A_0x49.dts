@@ -408,6 +408,11 @@
 				obj@556 {
 					obj_name="dpcon@56";
 				};
+
+				/* ------------ DPRTC --------------*/
+				obj@801 {
+					obj_name="dprtc@1";
+				};
 			};
 		};
 	};
@@ -706,6 +711,11 @@
 		dpcon@56 {
 			compatible="fsl,dpcon";
 			num_priorities=<8>;
+		};
+
+		/* ------------ DPRTC --------------*/
+		dprtc@1 {
+			compatible="fsl,dprtc";
 		};
 
 		/* ------------ DPNI --------------*/
