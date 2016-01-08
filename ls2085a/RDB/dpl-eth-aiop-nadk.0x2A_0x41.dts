@@ -503,13 +503,14 @@
 			max_senders = <8>;
 			options = "DPNI_OPT_MULTICAST_FILTER", "DPNI_OPT_UNICAST_FILTER", "DPNI_OPT_DIST_HASH", "DPNI_OPT_DIST_FS", "DPNI_OPT_FS_MASK_SUPPORT";
 			max_tcs = <1>;
-			max_dist_per_tc = <3 0 0>;
+			max_dist_per_tc = <8 0 0>;
+			max_fs_entries_per_tc = <0x40 0x0 0x0>;
 			max_unicast_filters = <0x0>;
 			max_multicast_filters = <0x0>;
 			max_vlan_filters = <0>;
 			max_qos_entries = <0>;
 			max_qos_key_size = <0>;
-			max_dist_key_size = <0x20>;
+			max_dist_key_size = <0x32>;
 		};
 		dpni@9 {
 			compatible = "fsl,dpni";
@@ -518,13 +519,14 @@
 			max_senders = <8>;
 			options = "DPNI_OPT_MULTICAST_FILTER", "DPNI_OPT_UNICAST_FILTER", "DPNI_OPT_DIST_HASH", "DPNI_OPT_DIST_FS", "DPNI_OPT_FS_MASK_SUPPORT";
 			max_tcs = <1>;
-			max_dist_per_tc = <3 0 0>;
+			max_dist_per_tc = <8 0 0>;
+			max_fs_entries_per_tc = <0x40 0x0 0x0>;
 			max_unicast_filters = <0x0>;
 			max_multicast_filters = <0x0>;
 			max_vlan_filters = <0>;
 			max_qos_entries = <0>;
 			max_qos_key_size = <0>;
-			max_dist_key_size = <0x20>;
+			max_dist_key_size = <0x32>;
 		};
 		dpni@10 {
 			compatible = "fsl,dpni";
