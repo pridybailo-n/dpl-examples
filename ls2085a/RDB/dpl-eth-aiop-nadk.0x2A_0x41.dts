@@ -358,6 +358,14 @@
 					obj_name = "dpcon@1";
 				};
 
+				obj@601 {
+					obj_name = "dpcon@19";
+				};
+
+				obj@602 {
+					obj_name = "dpcon@20";
+				};
+
 				obj@700 {
 					obj_name = "dpci@10";
 				};
@@ -763,6 +771,16 @@
 		};
 		
 		dpcon@18 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x8>;
+		};
+
+		dpcon@19 {
+			compatible = "fsl,dpcon";
+			num_priorities = <0x8>;
+		};
+
+		dpcon@20 {
 			compatible = "fsl,dpcon";
 			num_priorities = <0x8>;
 		};
