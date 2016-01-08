@@ -94,11 +94,6 @@
 					obj_name = "dpio@20";
 				};
 
-				/* ------------ DPAIOP -------------*/
-				obj@500{
-					obj_name = "dpaiop@0";
-				};				
-
 				/* ------------ DPCON --------------*/
 				obj@602 {
 					obj_name = "dpcon@2";
@@ -411,6 +406,10 @@
 					obj_name = "dpci@3";
 				};
 
+				/* ------------ DPAIOP -------------*/
+				obj@900{
+					obj_name = "dpaiop@0";
+				};
 
 			};
 		};
