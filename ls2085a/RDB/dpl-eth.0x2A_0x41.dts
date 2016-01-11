@@ -1,5 +1,5 @@
 /*
- * Copyright 2014-2015 Freescale Semiconductor, Inc.
+ * Copyright 2014-2016 Freescale Semiconductor, Inc.
  * "Bootstrap DPL" for ls2085a RDB boards featuring SerDes 0x2A_0x41.
  * This DPL defines one network interface mapped on the ETH0 copper port.
  * This together with the available DPMCP objects should be enough to boot Linux
@@ -36,6 +36,27 @@
 				/* ------------ DPIOs --------------*/
 				obj@400 {
 					obj_name = "dpio@0";
+				};
+				obj@401 {
+					obj_name = "dpio@1";
+				};
+				obj@402 {
+					obj_name = "dpio@2";
+				};
+				obj@403 {
+					obj_name = "dpio@3";
+				};
+				obj@404 {
+					obj_name = "dpio@4";
+				};
+				obj@405 {
+					obj_name = "dpio@5";
+				};
+				obj@406 {
+					obj_name = "dpio@6";
+				};
+				obj@407 {
+					obj_name = "dpio@7";
 				};
 
 				/* ------------ DPMCPs --------------*/
@@ -113,6 +134,41 @@
 
 		/* ------------ DPIO --------------*/
 		dpio@0 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <8>;
+		};
+		dpio@1 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <8>;
+		};
+		dpio@2 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <8>;
+		};
+		dpio@3 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <8>;
+		};
+		dpio@4 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <8>;
+		};
+		dpio@5 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <8>;
+		};
+		dpio@6 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <8>;
+		};
+		dpio@7 {
 			compatible = "fsl,dpio";
 			channel_mode = "DPIO_LOCAL_CHANNEL";
 			num_priorities = <8>;
