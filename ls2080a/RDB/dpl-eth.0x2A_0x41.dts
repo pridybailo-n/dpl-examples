@@ -139,10 +139,10 @@
 			compatible="fsl,dpni";
 			type = "DPNI_TYPE_NIC";
 			mac_addr = <0x00 0x00 0x00 0x00 0x00 0x00>;
-			max_senders = <8>;
+			max_senders = <1>;
 			options = "DPNI_OPT_MULTICAST_FILTER", "DPNI_OPT_UNICAST_FILTER";
 			max_tcs = <1>;
-			max_dist_per_tc = <0>;
+			max_dist_per_tc = <1>;
 			max_dist_key_size = <24>;
 		};
 
