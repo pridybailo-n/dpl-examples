@@ -414,11 +414,6 @@
 					obj_name = "dpci@3";
 				};
 
-				/* ------------ DPAIOP -------------*/
-				obj@900{
-					obj_name = "dpaiop@0";
-				};
-
 			};
 		};
 	};
@@ -550,12 +545,6 @@
 			max_qos_entries = <0>;
 			max_qos_key_size = <0>;
 			max_dist_key_size = <4>;
-		};
-		
-		/* ------------ DPAIOP ------------*/
-		dpaiop@0 {
-			compatible = "fsl,dpaiop";
-			aiop_container_id = <3>;
 		};
 		
 		/* ------------ DPBP --------------*/
