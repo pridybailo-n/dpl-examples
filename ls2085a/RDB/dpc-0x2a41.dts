@@ -37,19 +37,6 @@
 	board_info {
 		/* For RDB SerDes 0x2a_41 */
 		ports {
-			/* Cortina PHYs */
-			mac@1 {
-				link_type = "MAC_LINK_TYPE_FIXED";
-			};
-			mac@2 {
-				link_type = "MAC_LINK_TYPE_FIXED";
-			};
-			mac@3 {
-				link_type = "MAC_LINK_TYPE_FIXED";
-			};
-			mac@4 {
-				link_type = "MAC_LINK_TYPE_FIXED";
-			};
 			/* AQR PHYs */
 			mac@5 {
 				link_type = "MAC_LINK_TYPE_PHY";
