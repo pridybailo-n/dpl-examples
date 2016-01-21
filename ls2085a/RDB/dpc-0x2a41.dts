@@ -30,8 +30,11 @@
 	};
 	controllers {
 		qbman {
-			/* Transform one 8-WQ channel into four 2-WQ channels */
-			wq_ch_conversion = <1>;
+			/* Transform this number of 8-WQ channels into four times
+			 * as many 2-WQ channels. This allows the creation of a
+			 * larger number of DPCONs.
+			 */
+			wq_ch_conversion = <24>;
 		};
 	};
 	board_info {
