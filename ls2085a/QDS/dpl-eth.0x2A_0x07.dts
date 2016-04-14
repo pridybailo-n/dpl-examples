@@ -11,7 +11,6 @@
          *****************************************************************/
 	containers {
 		dprc@1 {
-			compatible = "fsl,dprc";
 			parent = "none";
 			options = "DPRC_CFG_OPT_SPAWN_ALLOWED" , "DPRC_CFG_OPT_ALLOC_ALLOWED", "DPRC_CFG_OPT_IRQ_CFG_ALLOWED";
 
@@ -457,25 +456,18 @@
 
 		/* ------------ DPBP --------------*/
 		dpbp@1 {
-			compatible="fsl,dpbp";
 		};
 		dpbp@2 {
-			compatible="fsl,dpbp";
 		};
 		dpbp@3 {
-			compatible="fsl,dpbp";
 		};
 		dpbp@4 {
-			compatible="fsl,dpbp";
 		};
 		dpbp@5 {
-			compatible="fsl,dpbp";
 		};
 		dpbp@6 {
-			compatible="fsl,dpbp";
 		};
 		dpbp@7 {
-			compatible="fsl,dpbp";
 		};
 		dpbp@8 {
 			compatible= "fsl,dpbp";
@@ -506,179 +498,138 @@
 		};
 		/* ------------ DPIO --------------*/
 		dpio@1 {
-			compatible = "fsl,dpio";
 			channel_mode = "DPIO_LOCAL_CHANNEL";
 			num_priorities = <8>;
 		};
 		dpio@2 {
-			compatible = "fsl,dpio";
 			channel_mode = "DPIO_LOCAL_CHANNEL";
 			num_priorities = <8>;
 		};
 		dpio@3 {
-			compatible = "fsl,dpio";
 			channel_mode = "DPIO_LOCAL_CHANNEL";
 			num_priorities = <8>;
 		};
 		dpio@4 {
-			compatible = "fsl,dpio";
 			channel_mode = "DPIO_LOCAL_CHANNEL";
 			num_priorities = <8>;
 		};
 		dpio@5 {
-			compatible = "fsl,dpio";
 			channel_mode = "DPIO_LOCAL_CHANNEL";
 			num_priorities = <8>;
 		};
 		dpio@6 {
-			compatible = "fsl,dpio";
 			channel_mode = "DPIO_LOCAL_CHANNEL";
 			num_priorities = <8>;
 		};
 		dpio@7 {
-			compatible = "fsl,dpio";
 			channel_mode = "DPIO_LOCAL_CHANNEL";
 			num_priorities = <8>;
 		};
 		dpio@8 {
-			compatible = "fsl,dpio";
 			channel_mode = "DPIO_LOCAL_CHANNEL";
 			num_priorities = <8>;
 		};
 		/* ------------ DPCON --------------*/
 		/* Currently, only 8-WQ channels are supported. */
 		dpcon@1 {
-			compatible="fsl,dpcon";
 			num_priorities=<8>;
 		};
 		dpcon@2 {
-			compatible="fsl,dpcon";
 			num_priorities=<8>;
 		};
 		dpcon@3 {
-			compatible="fsl,dpcon";
 			num_priorities=<8>;
 		};
 		dpcon@4 {
-			compatible="fsl,dpcon";
 			num_priorities=<8>;
 		};
 		dpcon@5 {
-			compatible="fsl,dpcon";
 			num_priorities=<8>;
 		};
 		dpcon@6 {
-			compatible="fsl,dpcon";
 			num_priorities=<8>;
 		};
 		dpcon@7 {
-			compatible="fsl,dpcon";
 			num_priorities=<8>;
 		};
 		dpcon@8 {
-			compatible="fsl,dpcon";
 			num_priorities=<8>;
 		};
 		dpcon@9 {
-			compatible="fsl,dpcon";
 			num_priorities=<8>;
 		};
 		dpcon@10 {
-			compatible="fsl,dpcon";
 			num_priorities=<8>;
 		};
 		dpcon@11 {
-			compatible="fsl,dpcon";
 			num_priorities=<8>;
 		};
 		dpcon@12 {
-			compatible="fsl,dpcon";
 			num_priorities=<8>;
 		};
 		dpcon@13 {
-			compatible="fsl,dpcon";
 			num_priorities=<8>;
 		};
 		dpcon@14 {
-			compatible="fsl,dpcon";
 			num_priorities=<8>;
 		};
 		dpcon@15 {
-			compatible="fsl,dpcon";
 			num_priorities=<8>;
 		};
 		dpcon@16 {
-			compatible="fsl,dpcon";
 			num_priorities=<8>;
 		};
 		dpcon@17 {
-			compatible="fsl,dpcon";
 			num_priorities=<8>;
 		};
 		dpcon@18 {
-			compatible="fsl,dpcon";
 			num_priorities=<8>;
 		};
 		dpcon@19 {
-			compatible="fsl,dpcon";
 			num_priorities=<8>;
 		};
 		dpcon@20 {
-			compatible="fsl,dpcon";
 			num_priorities=<8>;
 		};
 		dpcon@21 {
-			compatible="fsl,dpcon";
 			num_priorities=<8>;
 		};
 		dpcon@22 {
-			compatible="fsl,dpcon";
 			num_priorities=<8>;
 		};
 		dpcon@23 {
-			compatible="fsl,dpcon";
 			num_priorities=<8>;
 		};
 		dpcon@24 {
-			compatible="fsl,dpcon";
 			num_priorities=<8>;
 		};
 		dpcon@25 {
-			compatible="fsl,dpcon";
 			num_priorities=<8>;
 		};
 		dpcon@26 {
-			compatible="fsl,dpcon";
 			num_priorities=<8>;
 		};
 		dpcon@27 {
-			compatible="fsl,dpcon";
 			num_priorities=<8>;
 		};
 		dpcon@28 {
-			compatible="fsl,dpcon";
 			num_priorities=<8>;
 		};
 		dpcon@29 {
-			compatible="fsl,dpcon";
 			num_priorities=<8>;
 		};
 		dpcon@30 {
-			compatible="fsl,dpcon";
 			num_priorities=<8>;
 		};
 		dpcon@31 {
-			compatible="fsl,dpcon";
 			num_priorities=<8>;
 		};
 		dpcon@32 {
-			compatible="fsl,dpcon";
 			num_priorities=<8>;
 		};
 
 		/* ------------ DPRTC --------------*/
 		dprtc@1 {
-			compatible="fsl,dprtc";
 		};
 
 		/* ------------ DPNI --------------*/
@@ -711,7 +662,6 @@
 		 * altogether.
 		 */
 		dpni@1 {
-			compatible="fsl,dpni";
 			type = "DPNI_TYPE_NIC";
 			mac_addr = <0x00 0x00 0x00 0x00 0x00 0x00>;
 			max_senders = <8>;
@@ -721,7 +671,6 @@
 			max_dist_key_size = <24>;
 		};
 		dpni@2 {
-			compatible="fsl,dpni";
 			type = "DPNI_TYPE_NIC";
 			mac_addr = <0x00 0x00 0x00 0x00 0x00 0x00>;
 			max_senders = <8>;
@@ -731,7 +680,6 @@
 			max_dist_key_size = <24>;
 		};
 		dpni@3 {
-			compatible="fsl,dpni";
 			type = "DPNI_TYPE_NIC";
 			mac_addr = <0x00 0x00 0x00 0x00 0x00 0x00>;
 			max_senders = <8>;
@@ -741,7 +689,6 @@
 			max_dist_key_size = <24>;
 		};
 		dpni@4 {
-			compatible="fsl,dpni";
 			type = "DPNI_TYPE_NIC";
 			mac_addr = <0x00 0x00 0x00 0x00 0x00 0x00>;
 			max_senders = <8>;
@@ -751,7 +698,6 @@
 			max_dist_key_size = <24>;
 		};
 		dpni@5 {
-			compatible="fsl,dpni";
 			type = "DPNI_TYPE_NIC";
 			mac_addr = <0x00 0x00 0x00 0x00 0x00 0x00>;
 			max_senders = <8>;
@@ -761,7 +707,6 @@
 			max_dist_key_size = <24>;
 		};
 		dpni@6 {
-			compatible="fsl,dpni";
 			type = "DPNI_TYPE_NIC";
 			mac_addr = <0x00 0x00 0x00 0x00 0x00 0x00>;
 			max_senders = <8>;
@@ -771,7 +716,6 @@
 			max_dist_key_size = <24>;
 		};
 		dpni@7 {
-			compatible="fsl,dpni";
 			type = "DPNI_TYPE_NIC";
 			mac_addr = <0x00 0x00 0x00 0x00 0x00 0x00>;
 			max_senders = <8>;
@@ -781,7 +725,6 @@
 			max_dist_key_size = <24>;
 		};
 		dpni@8 {
-			compatible="fsl,dpni";
 			type = "DPNI_TYPE_NIC";
 			mac_addr = <0x00 0x00 0x00 0x00 0x00 0x00>;
 			max_senders = <8>;
@@ -791,7 +734,6 @@
 			max_dist_key_size = <24>;
 		};
 		dpni@9 {
-			compatible="fsl,dpni";
 			type = "DPNI_TYPE_NIC";
 			mac_addr = <0x00 0x00 0x00 0x00 0x00 0x00>;
 			max_senders = <8>;
@@ -801,7 +743,6 @@
 			max_dist_key_size = <24>;
 		};
 		dpni@10 {
-			compatible="fsl,dpni";
 			type = "DPNI_TYPE_NIC";
 			mac_addr = <0x00 0x00 0x00 0x00 0x00 0x00>;
 			max_senders = <8>;
@@ -811,7 +752,6 @@
 			max_dist_key_size = <24>;
 		};
 		dpni@11 {
-			compatible="fsl,dpni";
 			type = "DPNI_TYPE_NIC";
 			mac_addr = <0x00 0x00 0x00 0x00 0x00 0x00>;
 			max_senders = <8>;
@@ -821,7 +761,6 @@
 			max_dist_key_size = <24>;
 		};
 		dpni@12 {
-			compatible="fsl,dpni";
 			type = "DPNI_TYPE_NIC";
 			mac_addr = <0x00 0x00 0x00 0x00 0x00 0x00>;
 			max_senders = <8>;
@@ -831,7 +770,6 @@
 			max_dist_key_size = <24>;
 		};
 		dpni@13 {
-			compatible="fsl,dpni";
 			type = "DPNI_TYPE_NIC";
 			mac_addr = <0x00 0x00 0x00 0x00 0x00 0x00>;
 			max_senders = <8>;
@@ -841,7 +779,6 @@
 			max_dist_key_size = <24>;
 		};
 		dpni@14 {
-			compatible="fsl,dpni";
 			type = "DPNI_TYPE_NIC";
 			mac_addr = <0x00 0x00 0x00 0x00 0x00 0x00>;
 			max_senders = <8>;
@@ -851,7 +788,6 @@
 			max_dist_key_size = <24>;
 		};
 		dpni@15 {
-			compatible="fsl,dpni";
 			type = "DPNI_TYPE_NIC";
 			mac_addr = <0x00 0x00 0x00 0x00 0x00 0x00>;
 			max_senders = <8>;
@@ -861,7 +797,6 @@
 			max_dist_key_size = <24>;
 		};
 		dpni@16 {
-			compatible="fsl,dpni";
 			type = "DPNI_TYPE_NIC";
 			mac_addr = <0x00 0x00 0x00 0x00 0x00 0x00>;
 			max_senders = <8>;
@@ -873,180 +808,122 @@
 
 		/* ------------ DPMAC --------------*/
 		dpmac@1 {
-			compatible = "fsl,dpmac";
 		};
 		dpmac@2 {
-			compatible = "fsl,dpmac";
 		};
 		dpmac@3 {
-			compatible = "fsl,dpmac";
 		};
 		dpmac@4 {
-			compatible = "fsl,dpmac";
 		};
 		dpmac@5 {
-			compatible = "fsl,dpmac";
 		};
 		dpmac@6 {
-			compatible = "fsl,dpmac";
 		};
 		dpmac@7 {
-			compatible = "fsl,dpmac";
 		};
 		dpmac@8 {
-			compatible = "fsl,dpmac";
 		};
 		dpmac@9 {
-			compatible = "fsl,dpmac";
 		};
 		dpmac@10 {
-			compatible = "fsl,dpmac";
 		};
 		dpmac@11 {
-			compatible = "fsl,dpmac";
 		};
 		dpmac@12 {
-			compatible = "fsl,dpmac";
 		};
 		dpmac@13 {
-			compatible = "fsl,dpmac";
 		};
 		dpmac@14 {
-			compatible = "fsl,dpmac";
 		};
 		dpmac@15 {
-			compatible = "fsl,dpmac";
 		};
 		dpmac@16 {
-			compatible = "fsl,dpmac";
 		};
 
 		/* ------------ DPMCP --------------*/
 		dpmcp@1 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@2 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@3 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@4 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@5 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@6 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@7 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@8 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@9 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@10 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@11 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@12 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@13 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@14 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@15 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@16 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@17 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@18 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@19 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@20 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@21 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@22 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@23 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@24 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@25 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@26 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@27 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@28 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@29 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@30 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@31 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@32 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@33 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@34 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@35 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@36 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@37 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@38 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@39 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@40 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@41 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@42 {
-			compatible="fsl,dpmcp";
 		};
 	};
 

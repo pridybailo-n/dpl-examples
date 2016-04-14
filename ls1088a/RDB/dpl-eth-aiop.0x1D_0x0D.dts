@@ -136,7 +136,6 @@
 
 		/* ------------ DPNI --------------*/
 		dpni@1 {
-			compatible="fsl,dpni";
 			type = "DPNI_TYPE_NIC";
 			mac_addr = <0x00 0x00 0x00 0x00 0x00 0x00>;
 			max_senders = <8>;
@@ -162,28 +161,20 @@
 
 		/* ------------ DPBP --------------*/
 		dpbp@1 {
-			compatible="fsl,dpbp";
 		};
 		dpbp@2 {
-			compatible="fsl,dpbp";
 		};
 		dpbp@3 {
-			compatible="fsl,dpbp";
 		};
 		dpbp@4 {
-			compatible="fsl,dpbp";
 		};
 		dpbp@5 {
-			compatible="fsl,dpbp";
 		};
 		dpbp@6 {
-			compatible="fsl,dpbp";
 		};
 		dpbp@7 {
-			compatible="fsl,dpbp";
 		};
 		dpbp@8 {
-			compatible="fsl,dpbp";
 		};	
 
 		/* ------------ DPIO --------------*/
@@ -202,45 +193,32 @@
 
 		/* ------------ DPMCP --------------*/
 		dpmcp@1 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@2 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@3 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@4 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@5 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@6 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@7 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@8 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@9 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@10 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@11 {
-			compatible="fsl,dpmcp";
 		};
 		dpmcp@12 {
-			compatible="fsl,dpmcp";
 		};
 
 		/* ------------ DPCON --------------*/
 		dpcon@1 {
-			compatible="fsl,dpcon";
 			num_priorities=<8>;
 		};
 	};
