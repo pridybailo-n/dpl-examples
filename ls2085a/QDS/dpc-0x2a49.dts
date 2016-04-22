@@ -37,6 +37,15 @@
 			uart_id = <4>;
 		};
 	};
+	controllers {
+		qbman {
+			/* Transform this number of 8-WQ channels into four times
+			 * as many 2-WQ channels. This allows the creation of a
+			 * larger number of DPCONs.
+			 */
+			wq_ch_conversion = <54>;
+		};
+	};
 	board_info {
 		ports {
 			/* For QDS SerDes 0x2a_49: 4 SGMII ports. */
