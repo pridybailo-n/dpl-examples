@@ -1,3 +1,12 @@
+/*
+ * This DPC showcases one Linux configuration for SerDes 0x2a_49, maximizing
+ * resources allotted to the Ethernet driver. This is by no means a necessity,
+ * the DPAA2 Linux Eth driver can work with fewer resources, albeit with lesser
+ * performance.
+ *
+ * Copyright 2016 Freescale Semiconductor, Inc.
+ */
+
 /dts-v1/;
 /* DPC */
 / {

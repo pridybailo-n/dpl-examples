@@ -1,3 +1,9 @@
+/*
+ * This DPC showcases one Linux configuration for SerDes 0x2a_07
+ *
+ * Copyright 2016 Freescale Semiconductor, Inc.
+ */
+
 /dts-v1/;
 /* DPC */
 / {

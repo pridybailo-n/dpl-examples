@@ -1,3 +1,13 @@
+/*
+ * Copyright 2016 Freescale Semiconductor, Inc.
+
+ * DPC for ls2080a RDB boards featuring SerDes 0x2A_0x41.
+ * This DPC defines one network interface mapped on the ETH0 copper port.
+ * This together with the available DPMCP objects should be enough to boot Linux
+ * and to allow the dynamic addition of other objects to the Linux container,
+ * using the 'restool' utility.
+ */
+
 /dts-v1/;
 /* DPC */
 / {
