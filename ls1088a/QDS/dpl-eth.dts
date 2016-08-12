@@ -1,0 +1,185 @@
+/*
+ * Copyright 2015 Freescale Semiconductor, Inc.
+ * "Bootstrap DPL" for ls1088a featuring SerDes 0x1D_0x0D.
+ * This together with the available DPMCP objects should be enough to boot Linux
+ * and to allow the dynamic addition of other objects to the Linux container,
+ * using the 'restool' utility.
+ */
+
+/dts-v1/;
+/ {
+	/*****************************************************************
+         * Containers
+         *****************************************************************/
+	containers {
+		dprc@1 {
+			compatible = "fsl,dprc";
+			parent = "none";
+			options = "DPRC_CFG_OPT_SPAWN_ALLOWED" , "DPRC_CFG_OPT_ALLOC_ALLOWED", "DPRC_CFG_OPT_IRQ_CFG_ALLOWED";
+			objects {
+				/* ------------- MACs --------------*/
+				obj@100 {
+					obj_name = "dpmac@1";
+				};
+				obj@101 {
+					obj_name = "dpmac@2";
+				};
+				obj@102 {
+					obj_name = "dpmac@3";
+				};
+				obj@103 {
+					obj_name = "dpmac@4";
+				};
+				obj@104 {
+					obj_name = "dpmac@5";
+				};
+				obj@105 {
+					obj_name = "dpmac@6";
+				};
+				obj@106 {
+					obj_name = "dpmac@7";
+				};
+				obj@107 {
+					obj_name = "dpmac@8";
+				};
+				obj@108 {
+					obj_name = "dpmac@9";
+				};
+				obj@109 {
+					obj_name = "dpmac@10";
+				};
+
+				/* ------------ DPNIs --------------*/
+				obj@200 {
+					obj_name = "dpni@1";
+				};
+
+				/* ------------ DPBPs --------------*/
+				obj@300 {
+					obj_name="dpbp@1";
+				};
+
+				/* ------------ DPIOs --------------*/
+				obj@400 {
+					obj_name = "dpio@1";
+				};
+
+				/* ------------ DPMCPs --------------*/
+				obj@701 {
+					obj_name="dpmcp@1";
+				};
+				obj@702 {
+					obj_name="dpmcp@2";
+				};
+				obj@703 {
+					obj_name="dpmcp@3";
+				};
+				obj@704 {
+					obj_name="dpmcp@4";
+				};
+				obj@705 {
+					obj_name="dpmcp@5";
+				};
+				obj@706 {
+					obj_name="dpmcp@6";
+				};
+				obj@707 {
+					obj_name="dpmcp@7";
+				};
+				obj@708 {
+					obj_name="dpmcp@8";
+				};
+				obj@709 {
+					obj_name="dpmcp@9";
+				};
+				obj@710 {
+					obj_name="dpmcp@10";
+				};
+				obj@711 {
+					obj_name="dpmcp@11";
+				};
+				obj@712 {
+					obj_name="dpmcp@12";
+				};
+
+				/* ------------ DPCON --------------*/
+				obj@500 {
+					obj_name="dpcon@1";
+				};
+			};
+		};
+	};
+
+	/*****************************************************************
+         * Objects
+         *****************************************************************/
+	objects {
+
+		/* ------------ DPNI --------------*/
+		dpni@1 {
+			type = "DPNI_TYPE_NIC";
+			mac_addr = <0x00 0x00 0x00 0x00 0x00 0x00>;
+			max_senders = <1>;
+			options = "DPNI_OPT_MULTICAST_FILTER", "DPNI_OPT_UNICAST_FILTER";
+			max_tcs = <1>;
+			max_dist_per_tc = <1>;
+			max_dist_key_size = <24>;
+		};
+
+		/* ------------ DPBP --------------*/
+		dpbp@1 {
+		};
+
+		/* ------------ DPIO --------------*/
+		dpio@1 {
+			compatible = "fsl,dpio";
+			channel_mode = "DPIO_LOCAL_CHANNEL";
+			num_priorities = <8>;
+		};
+
+		dpmac@2 {
+			compatible = "fsl,dpmac";
+		};
+
+		/* ------------ DPMCP --------------*/
+		dpmcp@1 {
+		};
+		dpmcp@2 {
+		};
+		dpmcp@3 {
+		};
+		dpmcp@4 {
+		};
+		dpmcp@5 {
+		};
+		dpmcp@6 {
+		};
+		dpmcp@7 {
+		};
+		dpmcp@8 {
+		};
+		dpmcp@9 {
+		};
+		dpmcp@10 {
+		};
+		dpmcp@11 {
+		};
+		dpmcp@12 {
+		};
+
+		/* ------------ DPCON --------------*/
+		dpcon@1 {
+			num_priorities=<2>;
+		};
+	};
+
+	/*****************************************************************
+         * Connections
+         *****************************************************************/
+	connections {
+		connection@1{
+			endpoint1 = "dpni@1";
+			endpoint2 = "dpmac@1";
+		};
+	};
+};
