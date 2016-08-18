@@ -34,7 +34,7 @@
 			 * as many 2-WQ channels. This allows the creation of a
 			 * larger number of DPCONs.
 			 */
-			wq_ch_conversion = <32>;
+			wq_ch_conversion = <24>;
 		};
 	};
 	board_info {
