@@ -43,9 +43,6 @@
 			 * Add "MAC_LINK_TYPE_PHY" properties for ports
 			 * that have managed PHYs
 			 */
-			mac@2 {
-				link_type = "MAC_LINK_TYPE_PHY";
-			};
 		};
 	};
 };

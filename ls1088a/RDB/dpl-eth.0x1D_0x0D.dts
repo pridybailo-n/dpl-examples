@@ -122,6 +122,18 @@
 				obj@712 {
 					obj_name="dpmcp@12";
 				};
+				obj@713 {
+					obj_name="dpmcp@13";
+				};
+				obj@714 {
+					obj_name="dpmcp@14";
+				};
+				obj@715 {
+					obj_name="dpmcp@15";
+				};
+				obj@716 {
+					obj_name="dpmcp@16";
+				};
 
 				/* ------------ DPCON --------------*/
 				obj@500 {
@@ -232,6 +244,14 @@
 		dpmcp@11 {
 		};
 		dpmcp@12 {
+		};
+		dpmcp@13 {
+		};
+		dpmcp@14 {
+		};
+		dpmcp@15 {
+		};
+		dpmcp@16 {
 		};
 
 		/* ------------ DPCON --------------*/
