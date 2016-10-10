@@ -1,6 +1,6 @@
 /*
  * Copyright 2014-2016 Freescale Semiconductor, Inc.
- * "Bootstrap DPL" for ls2085a RDB boards featuring SerDes 0x2A_0x41.
+ * "Bootstrap DPL" for ls2088a RDB boards featuring SerDes 0x2A_0x41.
  * This DPL defines one network interface mapped on the ETH0 copper port.
  * This together with the available DPMCP objects should be enough to boot Linux
  * and to allow the dynamic addition of other objects to the Linux container,
@@ -9,9 +9,10 @@
 
 /dts-v1/;
 / {
+	dpl-version = <10>;
 	/*****************************************************************
-         * Containers
-         *****************************************************************/
+	 * Containers
+	 *****************************************************************/
 	containers {
 		dprc@1 {
 			compatible = "fsl,dprc";
@@ -153,20 +154,15 @@
 	};
 
 	/*****************************************************************
-         * Objects
-         *****************************************************************/
+	 * Objects
+	 *****************************************************************/
 	objects {
 
 		/* ------------ DPNI --------------*/
 		dpni@0 {
-			compatible="fsl,dpni";
-			type = "DPNI_TYPE_NIC";
-			mac_addr = <0x00 0x00 0x00 0x00 0x00 0x00>;
-			max_senders = <1>;
-			options = "DPNI_OPT_MULTICAST_FILTER", "DPNI_OPT_UNICAST_FILTER";
-			max_tcs = <1>;
-			max_dist_per_tc = <1>;
-			max_dist_key_size = <24>;
+			options = "";
+			num_queues = <1>;
+			num_tcs = <1>;
 		};
 
 		/* ------------ DPBP --------------*/
@@ -320,8 +316,8 @@
 	};
 
 	/*****************************************************************
-         * Connections
-         *****************************************************************/
+	 * Connections
+	 *****************************************************************/
 	connections {
 		connection@0{
 			endpoint1 = "dpni@0";
