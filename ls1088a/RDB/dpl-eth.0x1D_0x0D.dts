@@ -26,7 +26,7 @@
 
 				/* ------------ DPNIs --------------*/
 				obj@200 {
-					obj_name = "dpni@1";
+					obj_name = "dpni@0";
 				};
 
 				/* ------------ DPBPs --------------*/
@@ -65,7 +65,7 @@
 	objects {
 
 		/* ------------ DPNI --------------*/
-		dpni@1 {
+		dpni@0 {
 			options = "";
 			num_queues = <1>;
 			num_tcs = <1>;
@@ -183,7 +183,7 @@
 	 *****************************************************************/
 	connections {
 		connection@2{
-			endpoint1 = "dpni@1";
+			endpoint1 = "dpni@0";
 			endpoint2 = "dpmac@2";
 		};
 	};
