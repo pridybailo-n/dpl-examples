@@ -81,21 +81,21 @@
 
 		dpni@0 {
 			options = "";
-			num_queues = <8>;
+			num_queues = <1>;
 			num_tcs = <1>;
 			fs_entries = <0>;
 		}; 
 
 		dpni@1 {
 			options = "";
-			num_queues = <8>;
+			num_queues = <1>;
 			num_tcs = <1>;
 			fs_entries = <0>;
 		}; 
 
 		dpni@2 {
 			options = "";
-			num_queues = <8>;
+			num_queues = <1>;
 			num_tcs = <1>;
 			fs_entries = <0>;
 		}; 
