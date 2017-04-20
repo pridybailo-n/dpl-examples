@@ -139,6 +139,24 @@
 				obj@501 {
 					obj_name="dpcon@2";
 				};
+				obj@502 {
+					obj_name="dpcon@3";
+				};
+				obj@503 {
+					obj_name="dpcon@4";
+				};
+				obj@504 {
+					obj_name="dpcon@5";
+				};
+				obj@505 {
+					obj_name="dpcon@6";
+				};
+				obj@506 {
+					obj_name="dpcon@7";
+				};
+				obj@507 {
+					obj_name="dpcon@8";
+				};
 
 				/* ------------ DPRTC --------------*/
 				obj@800 {
@@ -157,8 +175,8 @@
 		dpni@1 {
 			type = "DPNI_TYPE_NIC";
 			mac_addr = <0x00 0x00 0x00 0x00 0x00 0x00>;
-			max_senders = <1>;
-			options = "DPNI_OPT_MULTICAST_FILTER", "DPNI_OPT_UNICAST_FILTER";
+			max_senders = <4>;
+			options = "DPNI_OPT_MULTICAST_FILTER", "DPNI_OPT_UNICAST_FILTER", "DPNI_OPT_DIST_HASH", "DPNI_OPT_DIST_FS";
 			max_tcs = <1>;
 			max_dist_per_tc = <4>;
 			max_dist_key_size = <24>;
@@ -166,8 +184,8 @@
 		dpni@2 {
 			type = "DPNI_TYPE_NIC";
 			mac_addr = <0x00 0x00 0x00 0x00 0x00 0x00>;
-			max_senders = <1>;
-			options = "DPNI_OPT_MULTICAST_FILTER", "DPNI_OPT_UNICAST_FILTER";
+			max_senders = <4>;
+			options = "DPNI_OPT_MULTICAST_FILTER", "DPNI_OPT_UNICAST_FILTER", "DPNI_OPT_DIST_HASH", "DPNI_OPT_DIST_FS";
 			max_tcs = <1>;
 			max_dist_per_tc = <4>;
 			max_dist_key_size = <24>;
@@ -245,6 +263,24 @@
 			num_priorities=<2>;
 		};
 		dpcon@2 {
+			num_priorities=<2>;
+		};
+		dpcon@3 {
+			num_priorities=<2>;
+		};
+		dpcon@4 {
+			num_priorities=<2>;
+		};
+		dpcon@5 {
+			num_priorities=<2>;
+		};
+		dpcon@6 {
+			num_priorities=<2>;
+		};
+		dpcon@7 {
+			num_priorities=<2>;
+		};
+		dpcon@8 {
 			num_priorities=<2>;
 		};
 
