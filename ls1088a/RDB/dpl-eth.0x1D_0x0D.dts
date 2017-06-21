@@ -216,7 +216,7 @@
 	connections {
 		connection@2{
 			endpoint1 = "dpni@0";
-			endpoint2 = "dpmac@2";
+			endpoint2 = "dpmac@5";
 		};
 	};
 };
