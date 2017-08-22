@@ -65,16 +65,7 @@
 	};
 	board_info {
 		ports {
-			mac@1 {
-				link_type = "MAC_LINK_TYPE_BACKPLANE";
-			};
 			mac@2 {
-				link_type = "MAC_LINK_TYPE_BACKPLANE";
-			};
-			mac@3 {
-				link_type = "MAC_LINK_TYPE_BACKPLANE";
-			};
-			mac@4 {
 				link_type = "MAC_LINK_TYPE_BACKPLANE";
 			};
 		};
